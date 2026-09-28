@@ -1,0 +1,65 @@
+{
+  "problem": "QWEN6",
+  "certified": true,
+  "model": "qwen3.5-flash",
+  "phases": [
+    {
+      "model": "qwen3.5-flash",
+      "trials_allowed": 5,
+      "certified": true,
+      "trials_used": 2,
+      "seconds": 169.1
+    }
+  ],
+  "verdict_log": {
+    "trials": 2,
+    "syntax_fixes": 0,
+    "revisions": 1,
+    "certified": true,
+    "failures": [
+      {
+        "solution": "robustness battery",
+        "review": "Your function was given inputs that are not valid solutions, and mishandled some of them. It must NEVER raise an exception, and it must reject any input that does not express a decision in the require"
+      }
+    ],
+    "seconds": 169.1
+  },
+  "audits": [
+    {
+      "round": 1,
+      "quality": {
+        "n": 1,
+        "actionable": 5.0,
+        "rule": 1.0,
+        "where": 1.0,
+        "computed": 1.0,
+        "required": 1.0,
+        "amount": 1.0
+      },
+      "rows": [
+        {
+          "message": "Constraint 1 (vertices connected by an edge cannot share a color), (0, 3): computed color 2 equals 2, required different, off by 1.0",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 5,
+            "ideal": "Constraint 1 violated at edge (0, 3): both endpoints assigned color 2, requiring distinct colors; violation excess is 1.0."
+          }
+        }
+      ]
+    }
+  ],
+  "bar": 4.0,
+  "judge": "qwen3.5-flash",
+  "metrics": {
+    "calls": 3,
+    "prompt_tokens": 7150,
+    "completion_tokens": 23837,
+    "total_tokens": 30987,
+    "llm_elapsed_sec": 213.801
+  },
+  "seconds": 214.3
+}

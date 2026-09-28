@@ -1,0 +1,29 @@
+{
+  "trials": 4,
+  "syntax_fixes": 0,
+  "revisions": 3,
+  "certified": true,
+  "failures": [
+    {
+      "solution": "cert_solution\\cert_bin_out_of_range.json",
+      "review": "This example is recorded as INFEASIBLE, but your function returned feasible. The recorded reason is: the solution's reported active_bin_periods list contains two entries whose bin field names a bin th"
+    },
+    {
+      "solution": "robustness battery",
+      "review": "Your function was given inputs that are not valid solutions, and mishandled some of them. It must NEVER raise an exception, and it must reject any input that does not express a decision in the require"
+    },
+    {
+      "solution": "cert_solution\\cert_bin_out_of_range.json",
+      "review": "This example is recorded as INFEASIBLE, but your function returned feasible. The recorded reason is: the solution's reported active_bin_periods list contains two entries whose bin field names a bin th"
+    }
+  ],
+  "seconds": 282.5,
+  "metrics": {
+    "calls": 4,
+    "prompt_tokens": 19253,
+    "completion_tokens": 47890,
+    "total_tokens": 67143,
+    "llm_elapsed_sec": 282.339
+  },
+  "model": "qwen3.6-flash"
+}

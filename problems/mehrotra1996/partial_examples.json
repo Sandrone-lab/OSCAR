@@ -1,0 +1,28 @@
+[
+ {
+  "instance": "instance/tiny_instance.json",
+  "partial": true,
+  "solution": {
+   "vertex_colors": {
+    "0": 0,
+    "3": 1
+   }
+  },
+  "feasible": true,
+  "rule": "adjacent vertices must differ in colour",
+  "reason": "vertices 0 and 3 share an edge and have different colours, which is what the rule requires; nothing present here breaks any rule"
+ },
+ {
+  "instance": "instance/tiny_instance.json",
+  "partial": true,
+  "solution": {
+   "vertex_colors": {
+    "0": 0,
+    "3": 0
+   }
+  },
+  "feasible": false,
+  "rule": "adjacent vertices must differ in colour",
+  "reason": "vertices 0 and 3 share an edge yet carry the same colour"
+ }
+]

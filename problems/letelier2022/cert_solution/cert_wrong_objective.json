@@ -1,0 +1,146 @@
+{
+ "status": 2,
+ "status_name": "OPTIMAL",
+ "objective_value": 6.0,
+ "assignments": [
+  {
+   "item_id": 0,
+   "bin": 0,
+   "period": 4,
+   "weight": 46
+  },
+  {
+   "item_id": 1,
+   "bin": 0,
+   "period": 13,
+   "weight": 31
+  },
+  {
+   "item_id": 2,
+   "bin": 0,
+   "period": 20,
+   "weight": 30
+  },
+  {
+   "item_id": 3,
+   "bin": 0,
+   "period": 4,
+   "weight": 13
+  },
+  {
+   "item_id": 4,
+   "bin": 0,
+   "period": 11,
+   "weight": 25
+  },
+  {
+   "item_id": 5,
+   "bin": 0,
+   "period": 16,
+   "weight": 36
+  },
+  {
+   "item_id": 6,
+   "bin": 0,
+   "period": 3,
+   "weight": 40
+  },
+  {
+   "item_id": 7,
+   "bin": 0,
+   "period": 6,
+   "weight": 47
+  },
+  {
+   "item_id": 8,
+   "bin": 0,
+   "period": 11,
+   "weight": 28
+  },
+  {
+   "item_id": 9,
+   "bin": 0,
+   "period": 16,
+   "weight": 13
+  },
+  {
+   "item_id": 10,
+   "bin": 0,
+   "period": 19,
+   "weight": 42
+  }
+ ],
+ "active_bin_periods": [
+  {
+   "bin": 0,
+   "period": 3,
+   "items": [
+    6
+   ],
+   "total_weight": 40
+  },
+  {
+   "bin": 0,
+   "period": 4,
+   "items": [
+    0,
+    3
+   ],
+   "total_weight": 59
+  },
+  {
+   "bin": 0,
+   "period": 6,
+   "items": [
+    7
+   ],
+   "total_weight": 47
+  },
+  {
+   "bin": 0,
+   "period": 11,
+   "items": [
+    4,
+    8
+   ],
+   "total_weight": 53
+  },
+  {
+   "bin": 0,
+   "period": 13,
+   "items": [
+    1
+   ],
+   "total_weight": 31
+  },
+  {
+   "bin": 0,
+   "period": 16,
+   "items": [
+    5,
+    9
+   ],
+   "total_weight": 49
+  },
+  {
+   "bin": 0,
+   "period": 19,
+   "items": [
+    10
+   ],
+   "total_weight": 42
+  },
+  {
+   "bin": 0,
+   "period": 20,
+   "items": [
+    2
+   ],
+   "total_weight": 30
+  }
+ ],
+ "num_active_bin_periods": 8,
+ "optimal": true,
+ "gap": 0.0,
+ "runtime_seconds": 0.027709007263183594
+}

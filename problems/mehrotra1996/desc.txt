@@ -1,0 +1,42 @@
+# Problem Description
+
+Given an undirected graph with a specified set of vertices and a specified set of edges connecting pairs of vertices, the task is to assign a color to every vertex such that no two vertices connected by an edge receive the same color, while using the fewest colors possible. The number of vertices and the number of edges are provided, along with the complete list of edges as pairs of vertices.
+
+Every vertex must receive exactly one color. Two vertices that are directly connected by an edge must receive different colors. The goal is to minimize the total number of distinct colors used across all vertices.
+
+The input data file data.json contains the following fields. This demonstrates the hierarchical structure of the data including the name of the keys.
+
+data.json
+├── instance_id                  (integer) unique instance identifier = 1
+├── problem                      (string) fixed as "graph_coloring"
+├── description                  (string) problem description text
+├── graph_class                  (string) graph type, e.g., "random_graph"
+├── graph_name                   (string) graph identifier, e.g., "G(30,0.3)"
+├── graph                        (object)
+│   ├── num_nodes                (integer) number of vertices = 30
+│   ├── num_edges                (integer) number of edges = 126
+│   ├── nodes                    (list of integers) vertex IDs 0..29
+│   └── edges                    (list of [u, v] pairs) undirected edges
+├── graph_properties             (object)
+│   ├── density                  (float) edge density = 0.289655
+│   ├── max_degree               (integer) maximum vertex degree = 13
+│   ├── min_degree               (integer) minimum vertex degree = 3
+│   └── avg_degree               (float) average vertex degree = 8.4
+├── generation_parameters        (object)
+│   ├── type                     (string) "random"
+│   ├── n                        (integer) number of vertices = 30
+│   ├── p                        (float) edge probability = 0.3
+│   ├── seed                     (integer) random seed = 1000
+│   └── expected_n               (integer) expected number of vertices = 30
+└── coordinates                  (null) no coordinates provided
+Your solution must be output as a JSON object with the following exact field names:
+
+solution.json
+├── objective_value              (integer) number of colors used
+├── num_colors                   (integer, optional) same as objective_value
+├── valid                        (boolean, optional) whether solution is valid
+├── vertex_colors                (object) color assignment for each vertex
+│   └── { "vertex_id": color_index }  keys: strings, values: integers
+└── color_classes                (list of lists, optional) vertices grouped by color
+    └── each color class: [vertex_id, vertex_id, ...]
+You may define additional auxiliary variables as needed, but the field names of the four fields above must strictly match.

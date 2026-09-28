@@ -1,0 +1,486 @@
+{
+  "problem": "QWEN4",
+  "certified": true,
+  "model": "qwen3.6-flash",
+  "phases": [
+    {
+      "model": "qwen3.6-flash",
+      "trials_allowed": 20,
+      "certified": true,
+      "trials_used": 8,
+      "seconds": 707.1
+    }
+  ],
+  "verdict_log": {
+    "trials": 8,
+    "syntax_fixes": 2,
+    "revisions": 6,
+    "certified": true,
+    "failures": [
+      {
+        "solution": "cert_solution\\cert_bin_out_of_range.json",
+        "review": "This example is recorded as INFEASIBLE, but your function returned feasible. The recorded reason is: the solution's reported active_bin_periods list contains two entries whose bin field names a bin th"
+      },
+      {
+        "solution": "cert_solution\\cert_lag_violated.json",
+        "review": "Your function raised NameError on this example: name 'computed_objectue' is not defined. It must return a result dictionary for every input."
+      },
+      {
+        "solution": "cert_solution\\cert_bin_out_of_range.json",
+        "review": "This example is recorded as INFEASIBLE, but your function returned feasible. The recorded reason is: the solution's reported active_bin_periods list contains two entries whose bin field names a bin th"
+      },
+      {
+        "solution": "cert_solution\\cert_abp_count_mismatch.json",
+        "review": "This example is recorded as INFEASIBLE, but your function returned feasible. The recorded reason is: num_active_bin_periods does not match len(active_bin_periods) Your function must detect this and re"
+      },
+      {
+        "solution": {
+          "assignments": [
+            {
+              "item_id": 0,
+              "bin": 0,
+              "period": 4,
+              "weight": 46
+            }
+          ]
+        },
+        "review": "This input is a FRAGMENT of a solution: it carries \"__partial__\": true and shows only what one rule does or does not allow. the single item shown sits in one bin in one period, which is what the rule "
+      },
+      {
+        "solution": "robustness battery",
+        "review": "Your function was given inputs that are not valid solutions, and mishandled some of them. It must NEVER raise an exception, and it must reject any input that does not express a decision in the require"
+      },
+      {
+        "solution": "robustness battery",
+        "review": "Your function was given inputs that are not valid solutions, and mishandled some of them. It must NEVER raise an exception, and it must reject any input that does not express a decision in the require"
+      }
+    ],
+    "seconds": 707.1
+  },
+  "audits": [
+    {
+      "round": 1,
+      "quality": {
+        "n": 10,
+        "actionable": 3.4,
+        "rule": 1.0,
+        "where": 0.6,
+        "computed": 0.7,
+        "required": 0.7,
+        "amount": 0.7
+      },
+      "rows": [
+        {
+          "message": "Constraint 3 (precedence), arc (0,1): computed lag difference 4 against required minimum 5, off by 1.00",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 5,
+            "ideal": "Precedence constraint 3 on arc (0,1) is violated because the computed time difference of 4 is below the required lag of 5 by 1 unit."
+          }
+        },
+        {
+          "message": "Constraint 3 (precedence), arc (2,1): computed lag difference -12 against required minimum -9, off by 3.00",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 5,
+            "ideal": "Constraint 3 (precedence) on Arc (2,1) is violated: computed lag difference -12 is less than the required minimum -9 by 3.00 units."
+          }
+        },
+        {
+          "message": "Constraint 2 (capacity), bin 0, period 4: computed weight 351.00 against required capacity 60, off by 291.00",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 4,
+            "ideal": "Constraint (capacity) violated at Bin 0, Period 4: Computed weight 351.0 exceeds required capacity 60.0 by 291.0."
+          }
+        },
+        {
+          "message": "Constraint 4 (exact assignment), item 0: computed count 0 against required 1, off by 0",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 4,
+            "ideal": "Constraint 4 (exact assignment) for item 0 reports a computed count of 0.0 against a required count of 1.0, indicating a shortfall of 1."
+          }
+        },
+        {
+          "message": "Constraint 6 (assignment-ABP consistency), bin {b}, period {p}: computed assigned items empty against required matching items.",
+          "verdict": {
+            "rule": true,
+            "where": false,
+            "computed": false,
+            "required": false,
+            "amount": false,
+            "actionable": 1,
+            "ideal": "Constraint 6 (assignment-ABP consistency): Computed value 0.0 fails to match required value 1.0."
+          }
+        },
+        {
+          "message": "Constraint 6 (assignment-ABP consistency), bin {b}, period {p}: computed assigned bin-period missing against required presence in active_bin_periods.",
+          "verdict": {
+            "rule": true,
+            "where": false,
+            "computed": false,
+            "required": false,
+            "amount": false,
+            "actionable": 1,
+            "ideal": "Constraint 6 violated at bin <id> and period <id>: required presence was 1.0 but computed activity was 0.0, missing by 1.0."
+          }
+        },
+        {
+          "message": "Constraint 6 (assignment-ABP consistency), bin {b}, period {p}: computed assigned items {exp_it} against reported items {rep_it_raw}",
+          "verdict": {
+            "rule": true,
+            "where": false,
+            "computed": false,
+            "required": false,
+            "amount": false,
+            "actionable": 0,
+            "ideal": "Constraint 6 (assignment-ABP consistency) violated: computed assigned item count 2.0 against reported active bin-period item count 3.0 (discrepancy 1.0)."
+          }
+        },
+        {
+          "message": "Constraint 6 (assignment-ABP consistency), bin 0, period 131: computed weight 43.00 against reported weight 32.00, off by 11.00",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 5,
+            "ideal": "Constraint 6 (assignment-ABP consistency), bin 0, period 131: LHS weight 32.00, RHS weight 43.00, raw excess 11.00."
+          }
+        },
+        {
+          "message": "Constraint 7 (active bin period count), reported count 9 against required list length 8, off by 1",
+          "verdict": {
+            "rule": true,
+            "where": false,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 4,
+            "ideal": "Constraint 7 (active bin period count) failed: computed count 9 exceeds required list length 8 by 1."
+          }
+        },
+        {
+          "message": "Constraint 1 (time bounds), item 0: computed period -1 against required [1, 20], off by 2.00",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 5,
+            "ideal": "Constraint 1 (time bounds) for item 0 violated: computed period -1 is outside the required range [1, 20], failing the lower bound by 2.00."
+          }
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "quality": {
+        "n": 10,
+        "actionable": 3.8,
+        "rule": 1.0,
+        "where": 0.7,
+        "computed": 1.0,
+        "required": 1.0,
+        "amount": 0.9
+      },
+      "rows": [
+        {
+          "message": "Constraint 3 (precedence), arc (0,1): computed lag difference 4 against required minimum 5, off by 1.00",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 5,
+            "ideal": "Constraint 3 (precedence), arc (0,1): computed lag difference 4 falls short of required minimum 5 by 1.00."
+          }
+        },
+        {
+          "message": "Constraint 3 (precedence), arc (2,1): computed lag difference -12 against required minimum -9, off by 3.00",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 5,
+            "ideal": "The precedence constraint on arc (2,1) failed: computed lag difference of -12 is below the required minimum of -9 by 3.00."
+          }
+        },
+        {
+          "message": "Constraint (capacity) violated at Bin 0, Period 4: Computed weight 351.0 exceeds required capacity 60.0 by 291.0.",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 4,
+            "ideal": "Capacity constraint violated at Bin 0, Period 4: Computed weight 351.0 exceeds bin capacity 60.0 by 291.0."
+          }
+        },
+        {
+          "message": "Constraint 4 (exact assignment) for item 0 reports a computed count of 0.0 against a required count of 1.0, indicating a discrepancy of 1.",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 4,
+            "ideal": "Constraint 4 (exact assignment) for item 0 is infeasible: the left-hand side evaluates to 0.0 against a required right-hand side of 1.0, resulting in a raw excess of 1.0."
+          }
+        },
+        {
+          "message": "Constraint 6 (assignment-ABP consistency): Computed value 0.0 fails to match required value 1.0.",
+          "verdict": {
+            "rule": true,
+            "where": false,
+            "computed": true,
+            "required": true,
+            "amount": false,
+            "actionable": 1,
+            "ideal": "Constraint 6 (assignment-ABP consistency): Computed value 0.0 falls short of required value 1.0 by 1.0."
+          }
+        },
+        {
+          "message": "Constraint 6 violated at bin 0 and period 6: required presence was 1.0 but computed activity was 0.0, missing by 1.0.",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 5,
+            "ideal": "Constraint 6 at bin 0 and period 6 violated: required presence was 1.0 but computed activity was 0.0, missing by 1.0."
+          }
+        },
+        {
+          "message": "Constraint 6 (assignment-ABP consistency) violated: computed assigned item count 3.0 against reported active bin-period item count 2.0 (discrepancy 1).",
+          "verdict": {
+            "rule": true,
+            "where": false,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 2,
+            "ideal": "Constraint 6 (assignment-ABP consistency) violated: computed assigned item count is 3.0 against reported active bin-period item count 2.0 (discrepancy 1.0)."
+          }
+        },
+        {
+          "message": "Constraint 6 (assignment-ABP consistency), bin 0, period 131: computed weight 43.00 against reported weight 32.00, off by 11.00",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 5,
+            "ideal": "Constraint 6 (assignment-ABP consistency) violated at bin 0, period 131: reported weight 32.00 does not match computed weight 43.00, differing by 11.00."
+          }
+        },
+        {
+          "message": "Constraint 7 (active bin period count) failed: computed count 9 exceeds required list length 8 by 1.",
+          "verdict": {
+            "rule": true,
+            "where": false,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 2,
+            "ideal": "Constraint 7 (active bin period count) violated: computed count 9 exceeds required limit 8 by 1."
+          }
+        },
+        {
+          "message": "Constraint 1 (time bounds), item 0: computed period -1 against required [1, 20], off by 2.00",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 5,
+            "ideal": "Constraint 1 (time bounds) for item 0 failed: computed period -1 is outside the required range [1, 20] by 2.00."
+          }
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "quality": {
+        "n": 11,
+        "actionable": 4.363636363636363,
+        "rule": 1.0,
+        "where": 0.9090909090909091,
+        "computed": 1.0,
+        "required": 1.0,
+        "amount": 1.0
+      },
+      "rows": [
+        {
+          "message": "Constraint 3 (precedence) for arc (0,1): computed lag difference 4 against required minimum 5, off by 1.00",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 5,
+            "ideal": "Constraint 3 (precedence) on arc (0,1) is infeasible: computed time difference 4 does not meet the required lag of 5, falling short by 1.00."
+          }
+        },
+        {
+          "message": "Constraint 3 (precedence) for arc (2,1): computed lag difference -12 against required minimum -9, off by 3.00",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 5,
+            "ideal": "Constraint 3 (precedence) for arc (2,1) violated: computed time difference -12 fails to meet required minimum -9 by 3.00."
+          }
+        },
+        {
+          "message": "Constraint 2 (capacity) at Bin 0, Period 4: Computed weight 351.0 exceeds bin capacity 60.0 by 291.0.",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 5,
+            "ideal": "Constraint 2 (capacity) at Bin 0, Period 4 fails: computed weight 351.0 exceeds required capacity 60.0 by excess 291.0."
+          }
+        },
+        {
+          "message": "Constraint 4 (exact assignment) for item 0: computed count 0.0 against required 1.0, resulting in a raw excess of 1.0.",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 4,
+            "ideal": "Constraint 4 (exact assignment) for item 0: computed count 0.0 against required 1.0, resulting in a raw excess of 1.0."
+          }
+        },
+        {
+          "message": "Constraint 6 (assignment-ABP consistency) at Bin 7, Period 6: Computed activity 0.0 falls short of required activity 1.0 by 1.0.",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 5,
+            "ideal": "Constraint 6 (assignment-ABP consistency) at Bin 7, Period 6 violates requirements: computed activity 0.0 falls short of required activity 1.0 by 1.0."
+          }
+        },
+        {
+          "message": "Constraint 6 (assignment-ABP consistency) at Bin -1, Period 19: Computed activity 0.0 falls short of required activity 1.0 by 1.0.",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 4,
+            "ideal": "Constraint 6 (assignment-ABP consistency) violated at Bin -1, Period 19: Computed activity 0.0 is insufficient; required activity is 1.0 (shortfall 1.0)."
+          }
+        },
+        {
+          "message": "Constraint 6 (assignment-ABP consistency) at Bin 0, Period 6: Computed activity 1.0 falls short of required presence 1.0 by 1.0.",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 5,
+            "ideal": "Constraint 6 (assignment-ABP consistency) at Bin 0, Period 6 is violated: computed activity 1.0 falls short of required presence 1.0 by 1.0."
+          }
+        },
+        {
+          "message": "Constraint 6 (assignment-ABP consistency) at Bin 0, Period 131: computed assigned item count 3.0 against reported active bin-period item count 2.0 (discrepancy 1.0).",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 4,
+            "ideal": "Constraint 6 (assignment-ABP consistency) violated at Bin 0, Period 131: computed assigned item count 3.0 differs from reported active bin-period item count 2.0 by 1.0."
+          }
+        },
+        {
+          "message": "Constraint 6 (assignment-ABP consistency) at Bin 0, Period 131: Computed weight 43.00 against reported weight 32.00, off by 11.00.",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 5,
+            "ideal": "Constraint 6 (assignment-ABP consistency) failed at Bin 0, Period 131: computed weight 43.00 does not match reported weight 32.00, off by 11.00."
+          }
+        },
+        {
+          "message": "Constraint 7 (active bin period count): computed count 9 exceeds required limit 8 by 1.",
+          "verdict": {
+            "rule": true,
+            "where": false,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 1,
+            "ideal": "Constraint 7 (active bin period count): LHS 9 exceeds RHS 8 by 1."
+          }
+        },
+        {
+          "message": "Constraint 1 (time bounds) for item 0: computed period -1 against required [1, 20], off by 2.00",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 5,
+            "ideal": "Constraint 1 (time bounds) for item 0: computed period -1 falls below required range [1, 20], missing lower bound by 2.00."
+          }
+        }
+      ]
+    }
+  ],
+  "bar": 4.0,
+  "judge": "qwen3.5-flash",
+  "metrics": {
+    "calls": 42,
+    "prompt_tokens": 138072,
+    "completion_tokens": 317832,
+    "total_tokens": 455904,
+    "llm_elapsed_sec": 2253.436
+  },
+  "seconds": 2254.8
+}

@@ -1,0 +1,44 @@
+[
+ {
+  "instance": "instance/tiny_instance.json",
+  "partial": true,
+  "solution": {
+   "assignment": {
+    "0": 0
+   },
+   "schedule": {
+    "0": {
+     "0": {
+      "facility": 0,
+      "start": 31,
+      "finish": 42
+     }
+    }
+   }
+  },
+  "feasible": true,
+  "rule": "a job's finish equals its start plus its processing time",
+  "reason": "the single job shown finishes exactly one processing time after it starts, which is what the rule requires"
+ },
+ {
+  "instance": "instance/tiny_instance.json",
+  "partial": true,
+  "solution": {
+   "assignment": {
+    "0": 0
+   },
+   "schedule": {
+    "0": {
+     "0": {
+      "facility": 0,
+      "start": 31,
+      "finish": 49
+     }
+    }
+   }
+  },
+  "feasible": false,
+  "rule": "a job's finish equals its start plus its processing time",
+  "reason": "the job shown finishes later than its start plus its processing time"
+ }
+]

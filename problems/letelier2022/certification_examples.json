@@ -1,0 +1,78 @@
+[
+  {
+    "instance": "instance\\large_instance_1.json",
+    "solution": "gurobi_solution\\large_solution_1.json",
+    "feasible": true,
+    "objective_value": 28.0,
+    "reason": null
+  },
+  {
+    "instance": "instance\\large_instance_2.json",
+    "solution": "gurobi_solution\\large_solution_2.json",
+    "feasible": true,
+    "objective_value": 48.0,
+    "reason": null
+  },
+  {
+    "instance": "instance\\large_instance_3.json",
+    "solution": "gurobi_solution\\large_solution_3.json",
+    "feasible": true,
+    "objective_value": 35.0,
+    "reason": null
+  },
+  {
+    "instance": "instance\\large_instance_4.json",
+    "solution": "gurobi_solution\\large_solution_4.json",
+    "feasible": true,
+    "objective_value": 24.0,
+    "reason": null
+  },
+  {
+    "instance": "instance\\tiny_instance.json",
+    "solution": "cert_solution\\cert_feasible_suboptimal_tiny.json",
+    "feasible": true,
+    "objective_value": 11.0,
+    "reason": "A valid plan that breaks no rule. It is far from optimal (11.0 against the best known 8.0), and it is still feasible: feasibility and optimality are different questions."
+  },
+  {
+    "instance": "instance\\tiny_instance.json",
+    "solution": "cert_solution\\cert_lag_violated.json",
+    "feasible": false,
+    "objective_value": null,
+    "reason": "items 0 and 1 must be at least 5 period(s) apart, and item 1 has been moved to period 8, which is one period too early"
+  },
+  {
+    "instance": "instance\\tiny_instance.json",
+    "solution": "cert_solution\\cert_over_capacity.json",
+    "feasible": false,
+    "objective_value": null,
+    "reason": "every item has been packed into a single bin in a single period, so the total weight in that bin exceeds its capacity"
+  },
+  {
+    "instance": "instance\\tiny_instance.json",
+    "solution": "cert_solution\\cert_missing_item.json",
+    "feasible": false,
+    "objective_value": null,
+    "reason": "one item is not placed into any bin in any period"
+  },
+  {
+    "instance": "instance\\tiny_instance.json",
+    "solution": "cert_solution\\cert_wrong_objective.json",
+    "feasible": false,
+    "objective_value": null,
+    "reason": "the reported objective does not equal the number of bin-period pairs actually used"
+  },
+  {
+    "instance": "instance\\tiny_instance.json",
+    "solution": "cert_solution\\cert_bin_out_of_range.json",
+    "feasible": false,
+    "objective_value": null,
+    "reason": "the solution's reported active_bin_periods list contains two entries whose bin field names a bin that does not exist: entry 3 reports bin 7 and entry 10 reports bin -1, while this instance has 4 bins numbered 0 to 3. The assignments themselves are valid; it is the reported active_bin_periods entries that are wrong."
+  },
+  {
+    "instance": "instance\\large_instance_1.json",
+    "solution": "cert_solution\\cert_window_violation.json",
+    "feasible": false,
+    "reason": "item 13 is scheduled in period 131, outside the time window [es, ls] that the precedence network allows it"
+  }
+]

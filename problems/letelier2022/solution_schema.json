@@ -1,0 +1,20 @@
+{
+  "objective_value": "<float> Total number of bin-period pairs used across the entire planning horizon.",
+  "assignments": [
+    {
+      "item_id": "<int> Identifier of the treatment item being assigned.",
+      "bin": "<int> Bin to which this item is assigned.",
+      "period": "<int> Time period in which this item is scheduled.",
+      "weight": "<int> Weight of this item consuming capacity in the assigned bin-period."
+    }
+  ],
+  "active_bin_periods": [
+    {
+      "bin": "<int> Bin identifier for this used bin-period pair.",
+      "period": "<int> Time period for this used bin-period pair.",
+      "items": "<list[int]> Identifiers of all items assigned to this bin in this period.",
+      "total_weight": "<int> Combined weight of all items assigned to this bin in this period."
+    }
+  ],
+  "num_active_bin_periods": "<int> Total count of bin-period pairs that contain at least one item."
+}

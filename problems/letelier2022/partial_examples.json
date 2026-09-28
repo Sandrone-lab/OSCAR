@@ -1,0 +1,36 @@
+[
+ {
+  "instance": "instance/tiny_instance.json",
+  "partial": true,
+  "solution": {
+   "assignments": [
+    {
+     "item_id": 0,
+     "bin": 0,
+     "period": 4,
+     "weight": 46
+    }
+   ]
+  },
+  "feasible": true,
+  "rule": "an item occupies exactly one bin in one period",
+  "reason": "the single item shown sits in one bin in one period, which is what the rule requires; nothing present here breaks any rule"
+ },
+ {
+  "instance": "instance/tiny_instance.json",
+  "partial": true,
+  "solution": {
+   "assignments": [
+    {
+     "item_id": 0,
+     "bin": 0,
+     "period": -1,
+     "weight": 46
+    }
+   ]
+  },
+  "feasible": false,
+  "rule": "a period must lie inside the planning horizon",
+  "reason": "the item shown is placed in a period before the horizon begins"
+ }
+]

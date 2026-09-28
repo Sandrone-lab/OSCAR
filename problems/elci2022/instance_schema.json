@@ -1,0 +1,15 @@
+{
+  "n": "<int> Number of jobs to be processed.",
+  "m": "<int> Number of facilities available for processing jobs.",
+  "num_scenarios": "<int> Number of uncertain processing-time scenarios considered.",
+  "facility_capacity_limits": "<list[int], length m> Maximum resource capacity of each facility at any point in time.",
+  "capacity_requirements": "<list[list[int]], shape [m][n]> Resource consumption rate of each job when processed on each facility.",
+  "release_times": "<list[int], length n> Earliest time at which each job may begin processing.",
+  "mean_processing_times": "<list[list[int]], shape [m][n]> Nominal processing time of each job on each facility before scenario-based perturbation.",
+  "scenarios": [
+    {
+      "probability": "<float> Likelihood of this scenario occurring.",
+      "processing_times": "<list[list[int]], shape [m][n]> Realized processing time of each job on each facility under this scenario."
+    }
+  ]
+}

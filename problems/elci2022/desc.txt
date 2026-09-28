@@ -1,0 +1,42 @@
+# Problem Description
+
+A company operates a set of facilities and must process a set of jobs under uncertainty. Processing times are uncertain and modeled through a finite set of scenarios, each with a known probability. The input data specifies, for each facility, a resource capacity limit. For each combination of job and facility, the data provides a resource consumption rate and a scenario-dependent processing time. Each job also has a release time before which it cannot begin processing. Jobs have no deadlines.
+
+The company must make two types of decisions. First, before the uncertain processing times are revealed, each job must be assigned to exactly one facility. Second, after a scenario is realized, the jobs assigned to each facility must be scheduled by choosing a start time for each job. A job's start time must be no earlier than its release time. Multiple jobs may run simultaneously on the same facility, but at every point in time the total resource consumption of all jobs whose processing intervals overlap that time point must not exceed the facility's resource capacity. Specifically, a job assigned to a given facility occupies resources from its start time until its start time plus its processing time on that facility under the realized scenario, and during this entire interval the job's resource consumption counts toward the facility's capacity limit.
+
+The goal is to minimize the expected makespan across all scenarios. The makespan under a given scenario is the latest completion time among all jobs, where a job's completion time equals its start time plus its processing time on its assigned facility under that scenario. The expected makespan is the probability-weighted sum of the scenario makespans. There is no first-stage assignment cost, so the entire objective consists of this expected makespan.
+
+
+The input data file data.json contains the following fields, given as a JSON
+object. Each leaf shows the value's type (and shape, where it is an array)
+followed by its meaning.
+
+data.json
+{
+  "n": "<int> Number of jobs to be processed.",
+  "m": "<int> Number of facilities available for processing jobs.",
+  "num_scenarios": "<int> Number of uncertain processing-time scenarios considered.",
+  "facility_capacity_limits": "<list[int], length m> Maximum resource capacity of each facility at any point in time.",
+  "capacity_requirements": "<list[list[int]], shape [m][n]> Resource consumption rate of each job when processed on each facility.",
+  "release_times": "<list[int], length n> Earliest time at which each job may begin processing.",
+  "mean_processing_times": "<list[list[int]], shape [m][n]> Nominal processing time of each job on each facility before scenario-based perturbation.",
+  "scenarios": [
+    {
+      "probability": "<float> Likelihood of this scenario occurring.",
+      "processing_times": "<list[list[int]], shape [m][n]> Realized processing time of each job on each facility under this scenario."
+    }
+  ]
+}
+
+Your solution must be output as a JSON object with the following exact field names:
+
+solution.json
+├── objective_value            (number) expected makespan value
+├── status                     (string, optional) solver status, e.g., "optimal"
+├── assignment                 (object) first-stage decisions
+│   └── { "job_id": facility_index }  each job assigned to exactly one facility
+│   └── keys: strings "0" to "n-1", values: integers 0 to m-1
+└── schedule                   (object) second-stage scheduling decisions per scenario
+    └── { "scenario_id": { "job_id": { "facility": int, "start": float, "finish": float } } }
+You may define additional auxiliary variables as needed, but the field names of the four fields above must strictly match.
+

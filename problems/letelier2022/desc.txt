@@ -1,0 +1,51 @@
+# Problem Description
+
+A facility must schedule a set of items across a discretized time horizon using identical capacitated bins. The input specifies a set of items, each with a known positive weight no greater than the bin capacity. A positive integer gives the common capacity shared by all bins. The time horizon consists of a set of consecutive time periods numbered from one up to a given upper bound on the number of periods. In each time period, up to a given maximum number of bins may be used; when that maximum is unrestricted (infinite), any number of bins may be used in any period. A directed graph over the items encodes pairwise timing relationships: each arc from one item to another carries an integer-valued lag (which may be positive, zero, or negative). A positive lag on an arc from a first item to a second item means that the time period assigned to the second item must exceed the time period assigned to the first item by at least that lag value. A negative lag on the reverse arc from the second item back to the first item encodes an upper bound on how far apart the two items may be scheduled, so that the pair of arcs between two items together confine the difference in their assigned time periods to a closed interval. Two additional auxiliary nodes, a source fixed to time zero and a sink fixed to one plus the upper bound on the number of periods, are connected by arcs of lag one to every real item, and these arcs together with the item-to-item arcs define the earliest and latest allowable time period for each item.
+
+Each item must be placed into exactly one bin in exactly one time period. The total weight of all items placed into any single bin in any single time period must not exceed the bin capacity. For every arc in the precedence graph, the lag value plus the time period of the arc's tail item must be no greater than the time period of the arc's head item. A bin-period pair is considered used whenever at least one item is assigned to it.
+
+The goal is to minimize the total number of used bin-period pairs across the entire time horizon.
+
+The input data file data.json contains the following fields. This demonstrates the hierarchical structure of the data including the name of the keys.
+
+data.json
+├── problem_type                 (string) fixed as "BPPTL"
+├── parameters                   (object)
+│   ├── W                        (integer) bin capacity
+│   ├── T                        (integer) number of time periods
+│   └── N                        (integer) number of bins
+├── items                        (list of item objects)
+│   └── each item:
+│       ├── item_id              (integer) unique item identifier
+│       ├── weight               (integer) weight of the item
+│       └── type                 (string) "treatment" for real items, "source"/"sink" for auxiliary
+├── arcs                         (list of arc objects)
+│   └── each arc:
+│       ├── from                 (integer) tail item ID
+│       ├── to                   (integer) head item ID
+│       └── lag                  (integer) minimum time lag from tail to head
+├── source_item_id               (integer) auxiliary source node ID
+└── sink_item_id                 (integer) auxiliary sink node ID
+Your solution must be output as a JSON object with the following exact field names:
+
+solution.json
+├── status                       (integer, optional) solver status code
+├── status_name                  (string, optional) solver status description
+├── objective_value              (number) number of used bin-period pairs
+├── optimal                      (boolean, optional) whether solution is optimal
+├── gap                          (float, optional) optimality gap
+├── runtime_seconds              (float, optional) solution time
+├── num_active_bin_periods       (integer) number of used bin-period pairs
+├── assignments                  (list of assignment objects)
+│   └── each assignment:
+│       ├── item_id              (integer) item being assigned
+│       ├── bin                  (integer) bin index (0-indexed)
+│       ├── period               (integer) time period (1-indexed)
+│       └── weight               (integer) item weight
+└── active_bin_periods           (list of active bin-period objects)
+    └── each active bin-period:
+        ├── bin                  (integer) bin index (0-indexed)
+        ├── period               (integer) time period (1-indexed)
+        ├── items                (list of integers) item IDs assigned to this bin-period
+        └── total_weight         (integer) sum of weights of items in this bin-period
+You may define additional auxiliary variables as needed, but the field names of the four fields above must strictly match.

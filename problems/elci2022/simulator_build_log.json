@@ -1,0 +1,129 @@
+{
+  "problem": "QWEN3",
+  "certified": true,
+  "model": "qwen3.6-flash",
+  "phases": [
+    {
+      "model": "qwen3.5-flash",
+      "trials_allowed": 5,
+      "certified": false,
+      "trials_used": 3,
+      "seconds": 448.8
+    },
+    {
+      "model": "qwen3.6-flash",
+      "trials_allowed": 20,
+      "certified": true,
+      "trials_used": 4,
+      "seconds": 253.5
+    }
+  ],
+  "verdict_log": {
+    "trials": 4,
+    "syntax_fixes": 0,
+    "revisions": 3,
+    "certified": true,
+    "failures": [
+      {
+        "solution": "cert_solution\\cert_before_release.json",
+        "review": "This example is recorded as INFEASIBLE, but your function returned feasible. The recorded reason is: a job starts before its release time Your function must detect this and report it as a violation. D"
+      },
+      {
+        "solution": {
+          "assignment": {
+            "0": 0
+          },
+          "schedule": {
+            "0": {
+              "0": {
+                "facility": 0,
+                "start": 31,
+                "finish": 49
+              }
+            }
+          }
+        },
+        "review": "This input is a FRAGMENT of a solution: it carries \"__partial__\": true and shows only what one rule does or does not allow. the job shown finishes later than its start plus its processing time Judge o"
+      },
+      {
+        "solution": "robustness battery",
+        "review": "Your function was given inputs that are not valid solutions, and mishandled some of them. It must NEVER raise an exception, and it must reject any input that does not express a decision in the require"
+      }
+    ],
+    "seconds": 253.5
+  },
+  "audits": [
+    {
+      "round": 1,
+      "quality": {
+        "n": 4,
+        "actionable": 4.5,
+        "rule": 1.0,
+        "where": 0.75,
+        "computed": 1.0,
+        "required": 1.0,
+        "amount": 0.75
+      },
+      "rows": [
+        {
+          "message": "Constraint 1 (processing time equality), job 0 on facility 0: computed finish 45.000000 != reported finish 50.000000, off by 5.000000.",
+          "verdict": {
+            "rule": true,
+            "where": false,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 3,
+            "ideal": "Constraint 'processing time equality' violated for Job 0 on Facility 0: computed finish 45.000000 != required finish 50.000000, difference 5.000000."
+          }
+        },
+        {
+          "message": "Constraint 1 (release time), job 0: start -3.000000 < release time 31, off by 34.000000.",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 5,
+            "ideal": "Constraint 1 (release time), job 0: start time -3.000000 < required 31.000000, shortfall 34.000000."
+          }
+        },
+        {
+          "message": "MALFORMED: job 0 missing from assignment. All jobs must be assigned.",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": false,
+            "actionable": 5,
+            "ideal": "Constraint Violation: job 0 is missing from the assignment mapping, whereas every job must be assigned to a facility."
+          }
+        },
+        {
+          "message": "Solution is valid, but the reported objective_value 86.0000 is inconsistent with the recomputed objective 61.0000.",
+          "verdict": {
+            "rule": "objective_value_accuracy",
+            "where": "solution.objective_value",
+            "computed": 61.0,
+            "required": 61.0,
+            "amount": 25.0,
+            "actionable": 5,
+            "ideal": "The reported objective_value of 86.0000 does not match the recalculated expected makespan of 61.0000, indicating an error in the objective calculation."
+          }
+        }
+      ]
+    }
+  ],
+  "bar": 4.0,
+  "judge": "qwen3.5-flash",
+  "metrics": {
+    "calls": 11,
+    "prompt_tokens": 60950,
+    "completion_tokens": 122645,
+    "total_tokens": 183595,
+    "llm_elapsed_sec": 879.441
+  },
+  "seconds": 881.6
+}

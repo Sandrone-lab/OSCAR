@@ -1,0 +1,8 @@
+{
+  "graph": {
+    "num_nodes": "<int> Total number of vertices in the graph.",
+    "num_edges": "<int> Total number of edges in the graph.",
+    "nodes": "<list[int], length num_nodes> Vertices of the graph, each identified by a unique integer label.",
+    "edges": "<list[list[int]], shape [num_edges][2]> Pairs of vertices connected by an edge, where each pair contains two distinct vertex labels."
+  }
+}

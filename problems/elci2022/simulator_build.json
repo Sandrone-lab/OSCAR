@@ -1,0 +1,64 @@
+{
+  "trials": 8,
+  "syntax_fixes": 0,
+  "revisions": 7,
+  "certified": false,
+  "failures": [
+    {
+      "solution": {
+        "assignment": {
+          "0": 0
+        },
+        "schedule": {
+          "0": {
+            "0": {
+              "facility": 0,
+              "start": 31,
+              "finish": 49
+            }
+          }
+        }
+      },
+      "review": "This input is a FRAGMENT of a solution: it carries \"__partial__\": true and shows only what one rule does or does not allow. the job shown finishes later than its start plus its processing time Judge o"
+    },
+    {
+      "solution": "robustness battery",
+      "review": "Your function was given inputs that are not valid solutions, and mishandled some of them. It must NEVER raise an exception, and it must reject any input that does not express a decision in the require"
+    },
+    {
+      "solution": "cert_solution\\cert_missing_assignment.json",
+      "review": "This example is recorded as INFEASIBLE, but your function returned feasible. The recorded reason is: one job is not assigned to any facility Your function must detect this and report it as a violation"
+    },
+    {
+      "solution": "cert_solution\\cert_missing_assignment.json",
+      "review": "This example is recorded as INFEASIBLE, but your function returned feasible. The recorded reason is: one job is not assigned to any facility Your function must detect this and report it as a violation"
+    },
+    {
+      "solution": "robustness battery",
+      "review": "Your function was given inputs that are not valid solutions, and mishandled some of them. It must NEVER raise an exception, and it must reject any input that does not express a decision in the require"
+    },
+    {
+      "solution": "robustness battery",
+      "review": "Your function was given inputs that are not valid solutions, and mishandled some of them. It must NEVER raise an exception, and it must reject any input that does not express a decision in the require"
+    },
+    {
+      "solution": "gurobi_solution\\large_solution_1.json",
+      "review": "This example is recorded as FEASIBLE, but your function returned infeasible. Your function reported these violations, and every one of them is wrong for this solution: Constraint 0 (Resource Capacity)"
+    },
+    {
+      "solution": "robustness battery",
+      "review": "Your function was given inputs that are not valid solutions, and mishandled some of them. It must NEVER raise an exception, and it must reject any input that does not express a decision in the require"
+    },
+    "stuck: robustness battery failed the same way 4 times; revision is not converging"
+  ],
+  "seconds": 554.2,
+  "best_examples_passed": 12,
+  "metrics": {
+    "calls": 8,
+    "prompt_tokens": 46443,
+    "completion_tokens": 101531,
+    "total_tokens": 147974,
+    "llm_elapsed_sec": 550.959
+  },
+  "model": "qwen3.6-flash"
+}

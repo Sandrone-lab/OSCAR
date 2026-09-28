@@ -1,0 +1,2326 @@
+{
+  "objective_value": 13.68,
+  "status": "optimal",
+  "assignment": {
+    "0": 2,
+    "1": 2,
+    "2": 0,
+    "3": 0,
+    "4": 3,
+    "5": 1,
+    "6": 0,
+    "7": 3,
+    "8": 2,
+    "9": 1,
+    "10": 0,
+    "11": 0,
+    "12": 1,
+    "13": 3,
+    "14": 0,
+    "15": 1,
+    "16": 2,
+    "17": 1
+  },
+  "schedule": {
+    "0": {
+      "0": {
+        "facility": 2,
+        "start": 44,
+        "finish": 49
+      },
+      "1": {
+        "facility": 2,
+        "start": 49,
+        "finish": 51
+      },
+      "2": {
+        "facility": 0,
+        "start": 26,
+        "finish": 32
+      },
+      "3": {
+        "facility": 0,
+        "start": 38,
+        "finish": 42
+      },
+      "4": {
+        "facility": 3,
+        "start": 22,
+        "finish": 28
+      },
+      "5": {
+        "facility": 1,
+        "start": 16,
+        "finish": 20
+      },
+      "6": {
+        "facility": 0,
+        "start": 10,
+        "finish": 15
+      },
+      "7": {
+        "facility": 3,
+        "start": 37,
+        "finish": 41
+      },
+      "8": {
+        "facility": 2,
+        "start": 33,
+        "finish": 38
+      },
+      "9": {
+        "facility": 1,
+        "start": 28,
+        "finish": 33
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 27
+      },
+      "11": {
+        "facility": 0,
+        "start": 34,
+        "finish": 37
+      },
+      "12": {
+        "facility": 1,
+        "start": 39,
+        "finish": 45
+      },
+      "13": {
+        "facility": 3,
+        "start": 42,
+        "finish": 45
+      },
+      "14": {
+        "facility": 0,
+        "start": 2,
+        "finish": 6
+      },
+      "15": {
+        "facility": 1,
+        "start": 47,
+        "finish": 50
+      },
+      "16": {
+        "facility": 2,
+        "start": 16,
+        "finish": 21
+      },
+      "17": {
+        "facility": 1,
+        "start": 24,
+        "finish": 30
+      }
+    },
+    "1": {
+      "0": {
+        "facility": 2,
+        "start": 43,
+        "finish": 48
+      },
+      "1": {
+        "facility": 2,
+        "start": 49,
+        "finish": 52
+      },
+      "2": {
+        "facility": 0,
+        "start": 26,
+        "finish": 31
+      },
+      "3": {
+        "facility": 0,
+        "start": 44,
+        "finish": 49
+      },
+      "4": {
+        "facility": 3,
+        "start": 22,
+        "finish": 30
+      },
+      "5": {
+        "facility": 1,
+        "start": 16,
+        "finish": 22
+      },
+      "6": {
+        "facility": 0,
+        "start": 11,
+        "finish": 15
+      },
+      "7": {
+        "facility": 3,
+        "start": 37,
+        "finish": 42
+      },
+      "8": {
+        "facility": 2,
+        "start": 27,
+        "finish": 43
+      },
+      "9": {
+        "facility": 1,
+        "start": 28,
+        "finish": 48
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 36
+      },
+      "11": {
+        "facility": 0,
+        "start": 39,
+        "finish": 42
+      },
+      "12": {
+        "facility": 1,
+        "start": 51,
+        "finish": 58
+      },
+      "13": {
+        "facility": 3,
+        "start": 42,
+        "finish": 45
+      },
+      "14": {
+        "facility": 0,
+        "start": 2,
+        "finish": 7
+      },
+      "15": {
+        "facility": 1,
+        "start": 48,
+        "finish": 51
+      },
+      "16": {
+        "facility": 2,
+        "start": 24,
+        "finish": 40
+      },
+      "17": {
+        "facility": 1,
+        "start": 26,
+        "finish": 32
+      }
+    },
+    "2": {
+      "0": {
+        "facility": 2,
+        "start": 43,
+        "finish": 49
+      },
+      "1": {
+        "facility": 2,
+        "start": 49,
+        "finish": 52
+      },
+      "2": {
+        "facility": 0,
+        "start": 39,
+        "finish": 45
+      },
+      "3": {
+        "facility": 0,
+        "start": 45,
+        "finish": 51
+      },
+      "4": {
+        "facility": 3,
+        "start": 30,
+        "finish": 37
+      },
+      "5": {
+        "facility": 1,
+        "start": 16,
+        "finish": 22
+      },
+      "6": {
+        "facility": 0,
+        "start": 10,
+        "finish": 15
+      },
+      "7": {
+        "facility": 3,
+        "start": 38,
+        "finish": 43
+      },
+      "8": {
+        "facility": 2,
+        "start": 27,
+        "finish": 32
+      },
+      "9": {
+        "facility": 1,
+        "start": 30,
+        "finish": 36
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 30
+      },
+      "11": {
+        "facility": 0,
+        "start": 36,
+        "finish": 39
+      },
+      "12": {
+        "facility": 1,
+        "start": 39,
+        "finish": 46
+      },
+      "13": {
+        "facility": 3,
+        "start": 42,
+        "finish": 45
+      },
+      "14": {
+        "facility": 0,
+        "start": 2,
+        "finish": 6
+      },
+      "15": {
+        "facility": 1,
+        "start": 47,
+        "finish": 50
+      },
+      "16": {
+        "facility": 2,
+        "start": 16,
+        "finish": 23
+      },
+      "17": {
+        "facility": 1,
+        "start": 24,
+        "finish": 30
+      }
+    },
+    "3": {
+      "0": {
+        "facility": 2,
+        "start": 43,
+        "finish": 49
+      },
+      "1": {
+        "facility": 2,
+        "start": 49,
+        "finish": 52
+      },
+      "2": {
+        "facility": 0,
+        "start": 33,
+        "finish": 39
+      },
+      "3": {
+        "facility": 0,
+        "start": 47,
+        "finish": 52
+      },
+      "4": {
+        "facility": 3,
+        "start": 22,
+        "finish": 28
+      },
+      "5": {
+        "facility": 1,
+        "start": 16,
+        "finish": 22
+      },
+      "6": {
+        "facility": 0,
+        "start": 10,
+        "finish": 22
+      },
+      "7": {
+        "facility": 3,
+        "start": 37,
+        "finish": 49
+      },
+      "8": {
+        "facility": 2,
+        "start": 30,
+        "finish": 48
+      },
+      "9": {
+        "facility": 1,
+        "start": 28,
+        "finish": 34
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 24
+      },
+      "11": {
+        "facility": 0,
+        "start": 39,
+        "finish": 41
+      },
+      "12": {
+        "facility": 1,
+        "start": 38,
+        "finish": 45
+      },
+      "13": {
+        "facility": 3,
+        "start": 47,
+        "finish": 50
+      },
+      "14": {
+        "facility": 0,
+        "start": 2,
+        "finish": 7
+      },
+      "15": {
+        "facility": 1,
+        "start": 49,
+        "finish": 52
+      },
+      "16": {
+        "facility": 2,
+        "start": 22,
+        "finish": 29
+      },
+      "17": {
+        "facility": 1,
+        "start": 29,
+        "finish": 33
+      }
+    },
+    "4": {
+      "0": {
+        "facility": 2,
+        "start": 43,
+        "finish": 48
+      },
+      "1": {
+        "facility": 2,
+        "start": 49,
+        "finish": 56
+      },
+      "2": {
+        "facility": 0,
+        "start": 26,
+        "finish": 32
+      },
+      "3": {
+        "facility": 0,
+        "start": 42,
+        "finish": 55
+      },
+      "4": {
+        "facility": 3,
+        "start": 22,
+        "finish": 28
+      },
+      "5": {
+        "facility": 1,
+        "start": 16,
+        "finish": 22
+      },
+      "6": {
+        "facility": 0,
+        "start": 10,
+        "finish": 14
+      },
+      "7": {
+        "facility": 3,
+        "start": 37,
+        "finish": 41
+      },
+      "8": {
+        "facility": 2,
+        "start": 39,
+        "finish": 45
+      },
+      "9": {
+        "facility": 1,
+        "start": 28,
+        "finish": 36
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 26
+      },
+      "11": {
+        "facility": 0,
+        "start": 34,
+        "finish": 42
+      },
+      "12": {
+        "facility": 1,
+        "start": 38,
+        "finish": 46
+      },
+      "13": {
+        "facility": 3,
+        "start": 42,
+        "finish": 44
+      },
+      "14": {
+        "facility": 0,
+        "start": 2,
+        "finish": 5
+      },
+      "15": {
+        "facility": 1,
+        "start": 52,
+        "finish": 55
+      },
+      "16": {
+        "facility": 2,
+        "start": 22,
+        "finish": 28
+      },
+      "17": {
+        "facility": 1,
+        "start": 24,
+        "finish": 30
+      }
+    },
+    "5": {
+      "0": {
+        "facility": 2,
+        "start": 43,
+        "finish": 49
+      },
+      "1": {
+        "facility": 2,
+        "start": 49,
+        "finish": 52
+      },
+      "2": {
+        "facility": 0,
+        "start": 26,
+        "finish": 31
+      },
+      "3": {
+        "facility": 0,
+        "start": 38,
+        "finish": 42
+      },
+      "4": {
+        "facility": 3,
+        "start": 24,
+        "finish": 32
+      },
+      "5": {
+        "facility": 1,
+        "start": 16,
+        "finish": 30
+      },
+      "6": {
+        "facility": 0,
+        "start": 10,
+        "finish": 15
+      },
+      "7": {
+        "facility": 3,
+        "start": 44,
+        "finish": 48
+      },
+      "8": {
+        "facility": 2,
+        "start": 27,
+        "finish": 34
+      },
+      "9": {
+        "facility": 1,
+        "start": 35,
+        "finish": 41
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 26
+      },
+      "11": {
+        "facility": 0,
+        "start": 44,
+        "finish": 52
+      },
+      "12": {
+        "facility": 1,
+        "start": 43,
+        "finish": 49
+      },
+      "13": {
+        "facility": 3,
+        "start": 49,
+        "finish": 52
+      },
+      "14": {
+        "facility": 0,
+        "start": 2,
+        "finish": 6
+      },
+      "15": {
+        "facility": 1,
+        "start": 49,
+        "finish": 52
+      },
+      "16": {
+        "facility": 2,
+        "start": 16,
+        "finish": 23
+      },
+      "17": {
+        "facility": 1,
+        "start": 30,
+        "finish": 36
+      }
+    },
+    "6": {
+      "0": {
+        "facility": 2,
+        "start": 43,
+        "finish": 57
+      },
+      "1": {
+        "facility": 2,
+        "start": 53,
+        "finish": 56
+      },
+      "2": {
+        "facility": 0,
+        "start": 26,
+        "finish": 30
+      },
+      "3": {
+        "facility": 0,
+        "start": 41,
+        "finish": 46
+      },
+      "4": {
+        "facility": 3,
+        "start": 25,
+        "finish": 33
+      },
+      "5": {
+        "facility": 1,
+        "start": 16,
+        "finish": 21
+      },
+      "6": {
+        "facility": 0,
+        "start": 12,
+        "finish": 16
+      },
+      "7": {
+        "facility": 3,
+        "start": 37,
+        "finish": 42
+      },
+      "8": {
+        "facility": 2,
+        "start": 44,
+        "finish": 50
+      },
+      "9": {
+        "facility": 1,
+        "start": 28,
+        "finish": 35
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 33
+      },
+      "11": {
+        "facility": 0,
+        "start": 34,
+        "finish": 37
+      },
+      "12": {
+        "facility": 1,
+        "start": 41,
+        "finish": 49
+      },
+      "13": {
+        "facility": 3,
+        "start": 48,
+        "finish": 55
+      },
+      "14": {
+        "facility": 0,
+        "start": 2,
+        "finish": 5
+      },
+      "15": {
+        "facility": 1,
+        "start": 49,
+        "finish": 52
+      },
+      "16": {
+        "facility": 2,
+        "start": 16,
+        "finish": 24
+      },
+      "17": {
+        "facility": 1,
+        "start": 24,
+        "finish": 28
+      }
+    },
+    "7": {
+      "0": {
+        "facility": 2,
+        "start": 43,
+        "finish": 48
+      },
+      "1": {
+        "facility": 2,
+        "start": 50,
+        "finish": 53
+      },
+      "2": {
+        "facility": 0,
+        "start": 43,
+        "finish": 49
+      },
+      "3": {
+        "facility": 0,
+        "start": 49,
+        "finish": 53
+      },
+      "4": {
+        "facility": 3,
+        "start": 22,
+        "finish": 38
+      },
+      "5": {
+        "facility": 1,
+        "start": 16,
+        "finish": 22
+      },
+      "6": {
+        "facility": 0,
+        "start": 23,
+        "finish": 26
+      },
+      "7": {
+        "facility": 3,
+        "start": 41,
+        "finish": 46
+      },
+      "8": {
+        "facility": 2,
+        "start": 37,
+        "finish": 44
+      },
+      "9": {
+        "facility": 1,
+        "start": 28,
+        "finish": 34
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 33
+      },
+      "11": {
+        "facility": 0,
+        "start": 34,
+        "finish": 37
+      },
+      "12": {
+        "facility": 1,
+        "start": 38,
+        "finish": 43
+      },
+      "13": {
+        "facility": 3,
+        "start": 42,
+        "finish": 45
+      },
+      "14": {
+        "facility": 0,
+        "start": 2,
+        "finish": 12
+      },
+      "15": {
+        "facility": 1,
+        "start": 47,
+        "finish": 55
+      },
+      "16": {
+        "facility": 2,
+        "start": 16,
+        "finish": 33
+      },
+      "17": {
+        "facility": 1,
+        "start": 24,
+        "finish": 29
+      }
+    },
+    "8": {
+      "0": {
+        "facility": 2,
+        "start": 43,
+        "finish": 49
+      },
+      "1": {
+        "facility": 2,
+        "start": 49,
+        "finish": 56
+      },
+      "2": {
+        "facility": 0,
+        "start": 26,
+        "finish": 31
+      },
+      "3": {
+        "facility": 0,
+        "start": 38,
+        "finish": 44
+      },
+      "4": {
+        "facility": 3,
+        "start": 22,
+        "finish": 30
+      },
+      "5": {
+        "facility": 1,
+        "start": 16,
+        "finish": 21
+      },
+      "6": {
+        "facility": 0,
+        "start": 10,
+        "finish": 15
+      },
+      "7": {
+        "facility": 3,
+        "start": 38,
+        "finish": 41
+      },
+      "8": {
+        "facility": 2,
+        "start": 31,
+        "finish": 37
+      },
+      "9": {
+        "facility": 1,
+        "start": 28,
+        "finish": 34
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 24
+      },
+      "11": {
+        "facility": 0,
+        "start": 44,
+        "finish": 47
+      },
+      "12": {
+        "facility": 1,
+        "start": 38,
+        "finish": 45
+      },
+      "13": {
+        "facility": 3,
+        "start": 46,
+        "finish": 48
+      },
+      "14": {
+        "facility": 0,
+        "start": 2,
+        "finish": 7
+      },
+      "15": {
+        "facility": 1,
+        "start": 47,
+        "finish": 50
+      },
+      "16": {
+        "facility": 2,
+        "start": 16,
+        "finish": 35
+      },
+      "17": {
+        "facility": 1,
+        "start": 24,
+        "finish": 30
+      }
+    },
+    "9": {
+      "0": {
+        "facility": 2,
+        "start": 44,
+        "finish": 50
+      },
+      "1": {
+        "facility": 2,
+        "start": 49,
+        "finish": 51
+      },
+      "2": {
+        "facility": 0,
+        "start": 26,
+        "finish": 31
+      },
+      "3": {
+        "facility": 0,
+        "start": 38,
+        "finish": 54
+      },
+      "4": {
+        "facility": 3,
+        "start": 22,
+        "finish": 30
+      },
+      "5": {
+        "facility": 1,
+        "start": 16,
+        "finish": 22
+      },
+      "6": {
+        "facility": 0,
+        "start": 10,
+        "finish": 14
+      },
+      "7": {
+        "facility": 3,
+        "start": 37,
+        "finish": 41
+      },
+      "8": {
+        "facility": 2,
+        "start": 27,
+        "finish": 35
+      },
+      "9": {
+        "facility": 1,
+        "start": 28,
+        "finish": 46
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 30
+      },
+      "11": {
+        "facility": 0,
+        "start": 34,
+        "finish": 37
+      },
+      "12": {
+        "facility": 1,
+        "start": 46,
+        "finish": 53
+      },
+      "13": {
+        "facility": 3,
+        "start": 46,
+        "finish": 49
+      },
+      "14": {
+        "facility": 0,
+        "start": 2,
+        "finish": 7
+      },
+      "15": {
+        "facility": 1,
+        "start": 53,
+        "finish": 56
+      },
+      "16": {
+        "facility": 2,
+        "start": 16,
+        "finish": 21
+      },
+      "17": {
+        "facility": 1,
+        "start": 24,
+        "finish": 39
+      }
+    },
+    "10": {
+      "0": {
+        "facility": 2,
+        "start": 43,
+        "finish": 49
+      },
+      "1": {
+        "facility": 2,
+        "start": 49,
+        "finish": 52
+      },
+      "2": {
+        "facility": 0,
+        "start": 44,
+        "finish": 50
+      },
+      "3": {
+        "facility": 0,
+        "start": 38,
+        "finish": 43
+      },
+      "4": {
+        "facility": 3,
+        "start": 22,
+        "finish": 29
+      },
+      "5": {
+        "facility": 1,
+        "start": 16,
+        "finish": 22
+      },
+      "6": {
+        "facility": 0,
+        "start": 31,
+        "finish": 36
+      },
+      "7": {
+        "facility": 3,
+        "start": 37,
+        "finish": 42
+      },
+      "8": {
+        "facility": 2,
+        "start": 27,
+        "finish": 47
+      },
+      "9": {
+        "facility": 1,
+        "start": 28,
+        "finish": 36
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 36
+      },
+      "11": {
+        "facility": 0,
+        "start": 43,
+        "finish": 46
+      },
+      "12": {
+        "facility": 1,
+        "start": 38,
+        "finish": 46
+      },
+      "13": {
+        "facility": 3,
+        "start": 46,
+        "finish": 49
+      },
+      "14": {
+        "facility": 0,
+        "start": 2,
+        "finish": 14
+      },
+      "15": {
+        "facility": 1,
+        "start": 50,
+        "finish": 52
+      },
+      "16": {
+        "facility": 2,
+        "start": 16,
+        "finish": 24
+      },
+      "17": {
+        "facility": 1,
+        "start": 24,
+        "finish": 30
+      }
+    },
+    "11": {
+      "0": {
+        "facility": 2,
+        "start": 43,
+        "finish": 49
+      },
+      "1": {
+        "facility": 2,
+        "start": 49,
+        "finish": 52
+      },
+      "2": {
+        "facility": 0,
+        "start": 26,
+        "finish": 31
+      },
+      "3": {
+        "facility": 0,
+        "start": 38,
+        "finish": 43
+      },
+      "4": {
+        "facility": 3,
+        "start": 22,
+        "finish": 29
+      },
+      "5": {
+        "facility": 1,
+        "start": 16,
+        "finish": 32
+      },
+      "6": {
+        "facility": 0,
+        "start": 10,
+        "finish": 22
+      },
+      "7": {
+        "facility": 3,
+        "start": 37,
+        "finish": 40
+      },
+      "8": {
+        "facility": 2,
+        "start": 27,
+        "finish": 34
+      },
+      "9": {
+        "facility": 1,
+        "start": 32,
+        "finish": 38
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 26
+      },
+      "11": {
+        "facility": 0,
+        "start": 35,
+        "finish": 38
+      },
+      "12": {
+        "facility": 1,
+        "start": 42,
+        "finish": 49
+      },
+      "13": {
+        "facility": 3,
+        "start": 42,
+        "finish": 49
+      },
+      "14": {
+        "facility": 0,
+        "start": 2,
+        "finish": 6
+      },
+      "15": {
+        "facility": 1,
+        "start": 49,
+        "finish": 52
+      },
+      "16": {
+        "facility": 2,
+        "start": 16,
+        "finish": 23
+      },
+      "17": {
+        "facility": 1,
+        "start": 34,
+        "finish": 40
+      }
+    },
+    "12": {
+      "0": {
+        "facility": 2,
+        "start": 43,
+        "finish": 56
+      },
+      "1": {
+        "facility": 2,
+        "start": 49,
+        "finish": 56
+      },
+      "2": {
+        "facility": 0,
+        "start": 26,
+        "finish": 30
+      },
+      "3": {
+        "facility": 0,
+        "start": 38,
+        "finish": 44
+      },
+      "4": {
+        "facility": 3,
+        "start": 22,
+        "finish": 28
+      },
+      "5": {
+        "facility": 1,
+        "start": 16,
+        "finish": 21
+      },
+      "6": {
+        "facility": 0,
+        "start": 10,
+        "finish": 14
+      },
+      "7": {
+        "facility": 3,
+        "start": 37,
+        "finish": 41
+      },
+      "8": {
+        "facility": 2,
+        "start": 27,
+        "finish": 34
+      },
+      "9": {
+        "facility": 1,
+        "start": 28,
+        "finish": 35
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 27
+      },
+      "11": {
+        "facility": 0,
+        "start": 34,
+        "finish": 37
+      },
+      "12": {
+        "facility": 1,
+        "start": 44,
+        "finish": 49
+      },
+      "13": {
+        "facility": 3,
+        "start": 51,
+        "finish": 54
+      },
+      "14": {
+        "facility": 0,
+        "start": 2,
+        "finish": 6
+      },
+      "15": {
+        "facility": 1,
+        "start": 54,
+        "finish": 56
+      },
+      "16": {
+        "facility": 2,
+        "start": 16,
+        "finish": 21
+      },
+      "17": {
+        "facility": 1,
+        "start": 24,
+        "finish": 28
+      }
+    },
+    "13": {
+      "0": {
+        "facility": 2,
+        "start": 43,
+        "finish": 47
+      },
+      "1": {
+        "facility": 2,
+        "start": 49,
+        "finish": 51
+      },
+      "2": {
+        "facility": 0,
+        "start": 26,
+        "finish": 32
+      },
+      "3": {
+        "facility": 0,
+        "start": 43,
+        "finish": 48
+      },
+      "4": {
+        "facility": 3,
+        "start": 22,
+        "finish": 30
+      },
+      "5": {
+        "facility": 1,
+        "start": 16,
+        "finish": 22
+      },
+      "6": {
+        "facility": 0,
+        "start": 11,
+        "finish": 14
+      },
+      "7": {
+        "facility": 3,
+        "start": 39,
+        "finish": 44
+      },
+      "8": {
+        "facility": 2,
+        "start": 29,
+        "finish": 35
+      },
+      "9": {
+        "facility": 1,
+        "start": 28,
+        "finish": 34
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 27
+      },
+      "11": {
+        "facility": 0,
+        "start": 35,
+        "finish": 42
+      },
+      "12": {
+        "facility": 1,
+        "start": 38,
+        "finish": 45
+      },
+      "13": {
+        "facility": 3,
+        "start": 42,
+        "finish": 50
+      },
+      "14": {
+        "facility": 0,
+        "start": 2,
+        "finish": 5
+      },
+      "15": {
+        "facility": 1,
+        "start": 47,
+        "finish": 50
+      },
+      "16": {
+        "facility": 2,
+        "start": 16,
+        "finish": 22
+      },
+      "17": {
+        "facility": 1,
+        "start": 24,
+        "finish": 29
+      }
+    },
+    "14": {
+      "0": {
+        "facility": 2,
+        "start": 43,
+        "finish": 48
+      },
+      "1": {
+        "facility": 2,
+        "start": 49,
+        "finish": 52
+      },
+      "2": {
+        "facility": 0,
+        "start": 26,
+        "finish": 31
+      },
+      "3": {
+        "facility": 0,
+        "start": 42,
+        "finish": 46
+      },
+      "4": {
+        "facility": 3,
+        "start": 22,
+        "finish": 29
+      },
+      "5": {
+        "facility": 1,
+        "start": 16,
+        "finish": 20
+      },
+      "6": {
+        "facility": 0,
+        "start": 10,
+        "finish": 14
+      },
+      "7": {
+        "facility": 3,
+        "start": 37,
+        "finish": 41
+      },
+      "8": {
+        "facility": 2,
+        "start": 46,
+        "finish": 52
+      },
+      "9": {
+        "facility": 1,
+        "start": 34,
+        "finish": 41
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 33
+      },
+      "11": {
+        "facility": 0,
+        "start": 34,
+        "finish": 37
+      },
+      "12": {
+        "facility": 1,
+        "start": 42,
+        "finish": 48
+      },
+      "13": {
+        "facility": 3,
+        "start": 46,
+        "finish": 49
+      },
+      "14": {
+        "facility": 0,
+        "start": 2,
+        "finish": 6
+      },
+      "15": {
+        "facility": 1,
+        "start": 48,
+        "finish": 51
+      },
+      "16": {
+        "facility": 2,
+        "start": 38,
+        "finish": 43
+      },
+      "17": {
+        "facility": 1,
+        "start": 25,
+        "finish": 30
+      }
+    },
+    "15": {
+      "0": {
+        "facility": 2,
+        "start": 44,
+        "finish": 48
+      },
+      "1": {
+        "facility": 2,
+        "start": 49,
+        "finish": 52
+      },
+      "2": {
+        "facility": 0,
+        "start": 26,
+        "finish": 31
+      },
+      "3": {
+        "facility": 0,
+        "start": 38,
+        "finish": 54
+      },
+      "4": {
+        "facility": 3,
+        "start": 22,
+        "finish": 28
+      },
+      "5": {
+        "facility": 1,
+        "start": 16,
+        "finish": 21
+      },
+      "6": {
+        "facility": 0,
+        "start": 10,
+        "finish": 15
+      },
+      "7": {
+        "facility": 3,
+        "start": 37,
+        "finish": 42
+      },
+      "8": {
+        "facility": 2,
+        "start": 36,
+        "finish": 43
+      },
+      "9": {
+        "facility": 1,
+        "start": 29,
+        "finish": 37
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 32
+      },
+      "11": {
+        "facility": 0,
+        "start": 34,
+        "finish": 37
+      },
+      "12": {
+        "facility": 1,
+        "start": 38,
+        "finish": 46
+      },
+      "13": {
+        "facility": 3,
+        "start": 42,
+        "finish": 44
+      },
+      "14": {
+        "facility": 0,
+        "start": 2,
+        "finish": 7
+      },
+      "15": {
+        "facility": 1,
+        "start": 47,
+        "finish": 50
+      },
+      "16": {
+        "facility": 2,
+        "start": 16,
+        "finish": 22
+      },
+      "17": {
+        "facility": 1,
+        "start": 24,
+        "finish": 29
+      }
+    },
+    "16": {
+      "0": {
+        "facility": 2,
+        "start": 43,
+        "finish": 49
+      },
+      "1": {
+        "facility": 2,
+        "start": 49,
+        "finish": 52
+      },
+      "2": {
+        "facility": 0,
+        "start": 26,
+        "finish": 31
+      },
+      "3": {
+        "facility": 0,
+        "start": 38,
+        "finish": 44
+      },
+      "4": {
+        "facility": 3,
+        "start": 22,
+        "finish": 29
+      },
+      "5": {
+        "facility": 1,
+        "start": 16,
+        "finish": 21
+      },
+      "6": {
+        "facility": 0,
+        "start": 11,
+        "finish": 15
+      },
+      "7": {
+        "facility": 3,
+        "start": 37,
+        "finish": 41
+      },
+      "8": {
+        "facility": 2,
+        "start": 27,
+        "finish": 35
+      },
+      "9": {
+        "facility": 1,
+        "start": 28,
+        "finish": 36
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 30
+      },
+      "11": {
+        "facility": 0,
+        "start": 34,
+        "finish": 37
+      },
+      "12": {
+        "facility": 1,
+        "start": 42,
+        "finish": 47
+      },
+      "13": {
+        "facility": 3,
+        "start": 46,
+        "finish": 48
+      },
+      "14": {
+        "facility": 0,
+        "start": 2,
+        "finish": 6
+      },
+      "15": {
+        "facility": 1,
+        "start": 47,
+        "finish": 50
+      },
+      "16": {
+        "facility": 2,
+        "start": 16,
+        "finish": 22
+      },
+      "17": {
+        "facility": 1,
+        "start": 32,
+        "finish": 36
+      }
+    },
+    "17": {
+      "0": {
+        "facility": 2,
+        "start": 43,
+        "finish": 49
+      },
+      "1": {
+        "facility": 2,
+        "start": 49,
+        "finish": 56
+      },
+      "2": {
+        "facility": 0,
+        "start": 26,
+        "finish": 32
+      },
+      "3": {
+        "facility": 0,
+        "start": 38,
+        "finish": 42
+      },
+      "4": {
+        "facility": 3,
+        "start": 24,
+        "finish": 30
+      },
+      "5": {
+        "facility": 1,
+        "start": 17,
+        "finish": 22
+      },
+      "6": {
+        "facility": 0,
+        "start": 12,
+        "finish": 16
+      },
+      "7": {
+        "facility": 3,
+        "start": 42,
+        "finish": 45
+      },
+      "8": {
+        "facility": 2,
+        "start": 27,
+        "finish": 35
+      },
+      "9": {
+        "facility": 1,
+        "start": 28,
+        "finish": 33
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 24
+      },
+      "11": {
+        "facility": 0,
+        "start": 34,
+        "finish": 37
+      },
+      "12": {
+        "facility": 1,
+        "start": 38,
+        "finish": 46
+      },
+      "13": {
+        "facility": 3,
+        "start": 42,
+        "finish": 45
+      },
+      "14": {
+        "facility": 0,
+        "start": 2,
+        "finish": 6
+      },
+      "15": {
+        "facility": 1,
+        "start": 47,
+        "finish": 50
+      },
+      "16": {
+        "facility": 2,
+        "start": 16,
+        "finish": 22
+      },
+      "17": {
+        "facility": 1,
+        "start": 24,
+        "finish": 28
+      }
+    },
+    "18": {
+      "0": {
+        "facility": 2,
+        "start": 43,
+        "finish": 56
+      },
+      "1": {
+        "facility": 2,
+        "start": 49,
+        "finish": 57
+      },
+      "2": {
+        "facility": 0,
+        "start": 26,
+        "finish": 30
+      },
+      "3": {
+        "facility": 0,
+        "start": 39,
+        "finish": 43
+      },
+      "4": {
+        "facility": 3,
+        "start": 32,
+        "finish": 39
+      },
+      "5": {
+        "facility": 1,
+        "start": 16,
+        "finish": 22
+      },
+      "6": {
+        "facility": 0,
+        "start": 11,
+        "finish": 16
+      },
+      "7": {
+        "facility": 3,
+        "start": 37,
+        "finish": 42
+      },
+      "8": {
+        "facility": 2,
+        "start": 40,
+        "finish": 48
+      },
+      "9": {
+        "facility": 1,
+        "start": 29,
+        "finish": 35
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 26
+      },
+      "11": {
+        "facility": 0,
+        "start": 34,
+        "finish": 37
+      },
+      "12": {
+        "facility": 1,
+        "start": 38,
+        "finish": 44
+      },
+      "13": {
+        "facility": 3,
+        "start": 46,
+        "finish": 54
+      },
+      "14": {
+        "facility": 0,
+        "start": 2,
+        "finish": 7
+      },
+      "15": {
+        "facility": 1,
+        "start": 47,
+        "finish": 50
+      },
+      "16": {
+        "facility": 2,
+        "start": 27,
+        "finish": 35
+      },
+      "17": {
+        "facility": 1,
+        "start": 24,
+        "finish": 30
+      }
+    },
+    "19": {
+      "0": {
+        "facility": 2,
+        "start": 43,
+        "finish": 49
+      },
+      "1": {
+        "facility": 2,
+        "start": 49,
+        "finish": 52
+      },
+      "2": {
+        "facility": 0,
+        "start": 26,
+        "finish": 32
+      },
+      "3": {
+        "facility": 0,
+        "start": 39,
+        "finish": 45
+      },
+      "4": {
+        "facility": 3,
+        "start": 22,
+        "finish": 27
+      },
+      "5": {
+        "facility": 1,
+        "start": 16,
+        "finish": 21
+      },
+      "6": {
+        "facility": 0,
+        "start": 10,
+        "finish": 14
+      },
+      "7": {
+        "facility": 3,
+        "start": 37,
+        "finish": 40
+      },
+      "8": {
+        "facility": 2,
+        "start": 30,
+        "finish": 35
+      },
+      "9": {
+        "facility": 1,
+        "start": 35,
+        "finish": 41
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 27
+      },
+      "11": {
+        "facility": 0,
+        "start": 36,
+        "finish": 39
+      },
+      "12": {
+        "facility": 1,
+        "start": 41,
+        "finish": 47
+      },
+      "13": {
+        "facility": 3,
+        "start": 42,
+        "finish": 45
+      },
+      "14": {
+        "facility": 0,
+        "start": 2,
+        "finish": 6
+      },
+      "15": {
+        "facility": 1,
+        "start": 47,
+        "finish": 54
+      },
+      "16": {
+        "facility": 2,
+        "start": 16,
+        "finish": 24
+      },
+      "17": {
+        "facility": 1,
+        "start": 24,
+        "finish": 30
+      }
+    },
+    "20": {
+      "0": {
+        "facility": 2,
+        "start": 43,
+        "finish": 59
+      },
+      "1": {
+        "facility": 2,
+        "start": 55,
+        "finish": 57
+      },
+      "2": {
+        "facility": 0,
+        "start": 35,
+        "finish": 41
+      },
+      "3": {
+        "facility": 0,
+        "start": 54,
+        "finish": 58
+      },
+      "4": {
+        "facility": 3,
+        "start": 27,
+        "finish": 35
+      },
+      "5": {
+        "facility": 1,
+        "start": 16,
+        "finish": 21
+      },
+      "6": {
+        "facility": 0,
+        "start": 10,
+        "finish": 15
+      },
+      "7": {
+        "facility": 3,
+        "start": 47,
+        "finish": 52
+      },
+      "8": {
+        "facility": 2,
+        "start": 48,
+        "finish": 54
+      },
+      "9": {
+        "facility": 1,
+        "start": 28,
+        "finish": 35
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 33
+      },
+      "11": {
+        "facility": 0,
+        "start": 34,
+        "finish": 36
+      },
+      "12": {
+        "facility": 1,
+        "start": 44,
+        "finish": 52
+      },
+      "13": {
+        "facility": 3,
+        "start": 56,
+        "finish": 58
+      },
+      "14": {
+        "facility": 0,
+        "start": 4,
+        "finish": 7
+      },
+      "15": {
+        "facility": 1,
+        "start": 57,
+        "finish": 59
+      },
+      "16": {
+        "facility": 2,
+        "start": 30,
+        "finish": 36
+      },
+      "17": {
+        "facility": 1,
+        "start": 24,
+        "finish": 39
+      }
+    },
+    "21": {
+      "0": {
+        "facility": 2,
+        "start": 43,
+        "finish": 49
+      },
+      "1": {
+        "facility": 2,
+        "start": 49,
+        "finish": 52
+      },
+      "2": {
+        "facility": 0,
+        "start": 26,
+        "finish": 32
+      },
+      "3": {
+        "facility": 0,
+        "start": 41,
+        "finish": 47
+      },
+      "4": {
+        "facility": 3,
+        "start": 23,
+        "finish": 31
+      },
+      "5": {
+        "facility": 1,
+        "start": 16,
+        "finish": 22
+      },
+      "6": {
+        "facility": 0,
+        "start": 10,
+        "finish": 14
+      },
+      "7": {
+        "facility": 3,
+        "start": 37,
+        "finish": 42
+      },
+      "8": {
+        "facility": 2,
+        "start": 29,
+        "finish": 35
+      },
+      "9": {
+        "facility": 1,
+        "start": 29,
+        "finish": 36
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 23
+      },
+      "11": {
+        "facility": 0,
+        "start": 34,
+        "finish": 37
+      },
+      "12": {
+        "facility": 1,
+        "start": 40,
+        "finish": 45
+      },
+      "13": {
+        "facility": 3,
+        "start": 42,
+        "finish": 45
+      },
+      "14": {
+        "facility": 0,
+        "start": 4,
+        "finish": 8
+      },
+      "15": {
+        "facility": 1,
+        "start": 48,
+        "finish": 51
+      },
+      "16": {
+        "facility": 2,
+        "start": 19,
+        "finish": 39
+      },
+      "17": {
+        "facility": 1,
+        "start": 24,
+        "finish": 29
+      }
+    },
+    "22": {
+      "0": {
+        "facility": 2,
+        "start": 43,
+        "finish": 58
+      },
+      "1": {
+        "facility": 2,
+        "start": 51,
+        "finish": 58
+      },
+      "2": {
+        "facility": 0,
+        "start": 49,
+        "finish": 54
+      },
+      "3": {
+        "facility": 0,
+        "start": 39,
+        "finish": 44
+      },
+      "4": {
+        "facility": 3,
+        "start": 22,
+        "finish": 27
+      },
+      "5": {
+        "facility": 1,
+        "start": 16,
+        "finish": 22
+      },
+      "6": {
+        "facility": 0,
+        "start": 10,
+        "finish": 15
+      },
+      "7": {
+        "facility": 3,
+        "start": 37,
+        "finish": 42
+      },
+      "8": {
+        "facility": 2,
+        "start": 35,
+        "finish": 41
+      },
+      "9": {
+        "facility": 1,
+        "start": 29,
+        "finish": 36
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 25
+      },
+      "11": {
+        "facility": 0,
+        "start": 34,
+        "finish": 37
+      },
+      "12": {
+        "facility": 1,
+        "start": 38,
+        "finish": 43
+      },
+      "13": {
+        "facility": 3,
+        "start": 42,
+        "finish": 45
+      },
+      "14": {
+        "facility": 0,
+        "start": 28,
+        "finish": 38
+      },
+      "15": {
+        "facility": 1,
+        "start": 47,
+        "finish": 50
+      },
+      "16": {
+        "facility": 2,
+        "start": 16,
+        "finish": 23
+      },
+      "17": {
+        "facility": 1,
+        "start": 31,
+        "finish": 36
+      }
+    },
+    "23": {
+      "0": {
+        "facility": 2,
+        "start": 43,
+        "finish": 48
+      },
+      "1": {
+        "facility": 2,
+        "start": 49,
+        "finish": 52
+      },
+      "2": {
+        "facility": 0,
+        "start": 26,
+        "finish": 40
+      },
+      "3": {
+        "facility": 0,
+        "start": 40,
+        "finish": 53
+      },
+      "4": {
+        "facility": 3,
+        "start": 22,
+        "finish": 30
+      },
+      "5": {
+        "facility": 1,
+        "start": 16,
+        "finish": 30
+      },
+      "6": {
+        "facility": 0,
+        "start": 12,
+        "finish": 16
+      },
+      "7": {
+        "facility": 3,
+        "start": 37,
+        "finish": 40
+      },
+      "8": {
+        "facility": 2,
+        "start": 32,
+        "finish": 39
+      },
+      "9": {
+        "facility": 1,
+        "start": 30,
+        "finish": 38
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 31
+      },
+      "11": {
+        "facility": 0,
+        "start": 34,
+        "finish": 36
+      },
+      "12": {
+        "facility": 1,
+        "start": 38,
+        "finish": 56
+      },
+      "13": {
+        "facility": 3,
+        "start": 42,
+        "finish": 45
+      },
+      "14": {
+        "facility": 0,
+        "start": 4,
+        "finish": 8
+      },
+      "15": {
+        "facility": 1,
+        "start": 56,
+        "finish": 59
+      },
+      "16": {
+        "facility": 2,
+        "start": 16,
+        "finish": 24
+      },
+      "17": {
+        "facility": 1,
+        "start": 33,
+        "finish": 38
+      }
+    },
+    "24": {
+      "0": {
+        "facility": 2,
+        "start": 43,
+        "finish": 49
+      },
+      "1": {
+        "facility": 2,
+        "start": 49,
+        "finish": 56
+      },
+      "2": {
+        "facility": 0,
+        "start": 26,
+        "finish": 31
+      },
+      "3": {
+        "facility": 0,
+        "start": 38,
+        "finish": 51
+      },
+      "4": {
+        "facility": 3,
+        "start": 28,
+        "finish": 35
+      },
+      "5": {
+        "facility": 1,
+        "start": 16,
+        "finish": 21
+      },
+      "6": {
+        "facility": 0,
+        "start": 10,
+        "finish": 21
+      },
+      "7": {
+        "facility": 3,
+        "start": 40,
+        "finish": 45
+      },
+      "8": {
+        "facility": 2,
+        "start": 36,
+        "finish": 41
+      },
+      "9": {
+        "facility": 1,
+        "start": 28,
+        "finish": 35
+      },
+      "10": {
+        "facility": 0,
+        "start": 0,
+        "finish": 30
+      },
+      "11": {
+        "facility": 0,
+        "start": 34,
+        "finish": 37
+      },
+      "12": {
+        "facility": 1,
+        "start": 38,
+        "finish": 57
+      },
+      "13": {
+        "facility": 3,
+        "start": 42,
+        "finish": 45
+      },
+      "14": {
+        "facility": 0,
+        "start": 2,
+        "finish": 5
+      },
+      "15": {
+        "facility": 1,
+        "start": 57,
+        "finish": 59
+      },
+      "16": {
+        "facility": 2,
+        "start": 16,
+        "finish": 22
+      },
+      "17": {
+        "facility": 1,
+        "start": 30,
+        "finish": 36
+      }
+    }
+  }
+}

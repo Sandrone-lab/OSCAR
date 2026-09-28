@@ -1,0 +1,21 @@
+{
+  "trials": 2,
+  "syntax_fixes": 0,
+  "revisions": 1,
+  "certified": true,
+  "failures": [
+    {
+      "solution": "robustness battery",
+      "review": "Your function was given inputs that are not valid solutions, and mishandled some of them. It must NEVER raise an exception, and it must reject any input that does not express a decision in the require"
+    }
+  ],
+  "seconds": 266.8,
+  "metrics": {
+    "calls": 2,
+    "prompt_tokens": 6255,
+    "completion_tokens": 23763,
+    "total_tokens": 30018,
+    "llm_elapsed_sec": 266.525
+  },
+  "model": "qwen3.5-flash"
+}

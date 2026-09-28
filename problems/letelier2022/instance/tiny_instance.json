@@ -1,0 +1,323 @@
+{
+  "problem": "BPPTL",
+  "variant": "BPPTL_infinity",
+  "description": "Bin Packing Problem with Time Lags - Application instance (phytosanitary treatment planning)",
+  "parameters": {
+    "Q": 3,
+    "T": 20,
+    "N": 4,
+    "U": 2,
+    "W": 60,
+    "L": "infinity"
+  },
+  "num_real_items": 11,
+  "num_total_items": 13,
+  "source_item_id": 11,
+  "sink_item_id": 12,
+  "items": [
+    {
+      "item_id": 0,
+      "weight": 46,
+      "type": "treatment",
+      "request_id": 0,
+      "treatment_index": 0
+    },
+    {
+      "item_id": 1,
+      "weight": 31,
+      "type": "treatment",
+      "request_id": 0,
+      "treatment_index": 1
+    },
+    {
+      "item_id": 2,
+      "weight": 30,
+      "type": "treatment",
+      "request_id": 0,
+      "treatment_index": 2
+    },
+    {
+      "item_id": 3,
+      "weight": 13,
+      "type": "treatment",
+      "request_id": 1,
+      "treatment_index": 0
+    },
+    {
+      "item_id": 4,
+      "weight": 25,
+      "type": "treatment",
+      "request_id": 1,
+      "treatment_index": 1
+    },
+    {
+      "item_id": 5,
+      "weight": 36,
+      "type": "treatment",
+      "request_id": 1,
+      "treatment_index": 2
+    },
+    {
+      "item_id": 6,
+      "weight": 40,
+      "type": "treatment",
+      "request_id": 2,
+      "treatment_index": 0
+    },
+    {
+      "item_id": 7,
+      "weight": 47,
+      "type": "treatment",
+      "request_id": 2,
+      "treatment_index": 1
+    },
+    {
+      "item_id": 8,
+      "weight": 28,
+      "type": "treatment",
+      "request_id": 2,
+      "treatment_index": 2
+    },
+    {
+      "item_id": 9,
+      "weight": 13,
+      "type": "treatment",
+      "request_id": 2,
+      "treatment_index": 3
+    },
+    {
+      "item_id": 10,
+      "weight": 42,
+      "type": "treatment",
+      "request_id": 2,
+      "treatment_index": 4
+    },
+    {
+      "item_id": 11,
+      "weight": 60,
+      "type": "source"
+    },
+    {
+      "item_id": 12,
+      "weight": 60,
+      "type": "sink"
+    }
+  ],
+  "requests": [
+    {
+      "request_id": 0,
+      "e_q": 7,
+      "e_minus": 5,
+      "e_plus": 9,
+      "f_q": -1,
+      "n_q": 3,
+      "f_q_prime": 27,
+      "treatment_item_ids": [
+        0,
+        1,
+        2
+      ],
+      "treatment_weights": [
+        46,
+        31,
+        30
+      ]
+    },
+    {
+      "request_id": 1,
+      "e_q": 7,
+      "e_minus": 5,
+      "e_plus": 9,
+      "f_q": -4,
+      "n_q": 3,
+      "f_q_prime": 24,
+      "treatment_item_ids": [
+        3,
+        4,
+        5
+      ],
+      "treatment_weights": [
+        13,
+        25,
+        36
+      ]
+    },
+    {
+      "request_id": 2,
+      "e_q": 4,
+      "e_minus": 3,
+      "e_plus": 5,
+      "f_q": 0,
+      "n_q": 5,
+      "f_q_prime": 24,
+      "treatment_item_ids": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "treatment_weights": [
+        40,
+        47,
+        28,
+        13,
+        42
+      ]
+    }
+  ],
+  "arcs": [
+    {
+      "from": 11,
+      "to": 12,
+      "lag": 21
+    },
+    {
+      "from": 12,
+      "to": 11,
+      "lag": -21
+    },
+    {
+      "from": 0,
+      "to": 1,
+      "lag": 5
+    },
+    {
+      "from": 1,
+      "to": 0,
+      "lag": -9
+    },
+    {
+      "from": 1,
+      "to": 2,
+      "lag": 5
+    },
+    {
+      "from": 2,
+      "to": 1,
+      "lag": -9
+    },
+    {
+      "from": 11,
+      "to": 0,
+      "lag": 4
+    },
+    {
+      "from": 0,
+      "to": 11,
+      "lag": -8
+    },
+    {
+      "from": 2,
+      "to": 12,
+      "lag": 1
+    },
+    {
+      "from": 12,
+      "to": 2,
+      "lag": -3
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "lag": 5
+    },
+    {
+      "from": 4,
+      "to": 3,
+      "lag": -9
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "lag": 5
+    },
+    {
+      "from": 5,
+      "to": 4,
+      "lag": -9
+    },
+    {
+      "from": 11,
+      "to": 3,
+      "lag": 1
+    },
+    {
+      "from": 3,
+      "to": 11,
+      "lag": -5
+    },
+    {
+      "from": 5,
+      "to": 12,
+      "lag": 2
+    },
+    {
+      "from": 12,
+      "to": 5,
+      "lag": -6
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "lag": 3
+    },
+    {
+      "from": 7,
+      "to": 6,
+      "lag": -5
+    },
+    {
+      "from": 7,
+      "to": 8,
+      "lag": 3
+    },
+    {
+      "from": 8,
+      "to": 7,
+      "lag": -5
+    },
+    {
+      "from": 8,
+      "to": 9,
+      "lag": 3
+    },
+    {
+      "from": 9,
+      "to": 8,
+      "lag": -5
+    },
+    {
+      "from": 9,
+      "to": 10,
+      "lag": 3
+    },
+    {
+      "from": 10,
+      "to": 9,
+      "lag": -5
+    },
+    {
+      "from": 11,
+      "to": 6,
+      "lag": 3
+    },
+    {
+      "from": 6,
+      "to": 11,
+      "lag": -5
+    },
+    {
+      "from": 10,
+      "to": 12,
+      "lag": 1
+    },
+    {
+      "from": 12,
+      "to": 10,
+      "lag": -2
+    }
+  ],
+  "seed": 42100,
+  "instance_index": 1
+}

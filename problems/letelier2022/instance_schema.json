@@ -1,0 +1,43 @@
+{
+  "parameters": {
+    "Q": "<int> Number of treatment requests to be scheduled.",
+    "T": "<int> Number of time periods in the planning horizon.",
+    "N": "<int> Average number of treatments per request.",
+    "U": "<int> Average number of treatments that can be handled per bin per time period.",
+    "W": "<int> Maximum total weight that each bin can hold in any time period.",
+    "L": "<str> Maximum number of bins available per time period ('infinity' if unrestricted)."
+  },
+  "num_real_items": "<int> Total number of treatment items to be scheduled (excluding source and sink).",
+  "num_total_items": "<int> Total number of items including the source and sink auxiliary items.",
+  "source_item_id": "<int> Identifier of the auxiliary source item fixed at time zero.",
+  "sink_item_id": "<int> Identifier of the auxiliary sink item fixed at time T plus one.",
+  "items": [
+    {
+      "item_id": "<int> Unique identifier for this item.",
+      "weight": "<int> Weight of this item that consumes bin capacity when assigned.",
+      "type": "<str> Role of this item: 'treatment' for a real schedulable item, 'source' or 'sink' for auxiliary timing anchors.",
+      "request_id": "<int> Identifier of the treatment request this item belongs to (treatment items only).",
+      "treatment_index": "<int> Position of this treatment within its request's ordered sequence (treatment items only)."
+    }
+  ],
+  "requests": [
+    {
+      "request_id": "<int> Unique identifier for this treatment request.",
+      "e_q": "<int> Ideal number of time periods between consecutive treatments in this request.",
+      "e_minus": "<int> Minimum allowed number of time periods between consecutive treatments in this request.",
+      "e_plus": "<int> Maximum allowed number of time periods between consecutive treatments in this request.",
+      "f_q": "<int> Time period of the last treatment before the planning horizon for this request.",
+      "n_q": "<int> Number of treatments for this request that fall within the planning horizon.",
+      "f_q_prime": "<int> Time period of the first treatment after the planning horizon for this request.",
+      "treatment_item_ids": "<list[int], length n_q> Ordered list of item identifiers for each treatment in this request.",
+      "treatment_weights": "<list[int], length n_q> Weight of each treatment item in this request, in the same order as treatment_item_ids."
+    }
+  ],
+  "arcs": [
+    {
+      "from": "<int> Item identifier at the tail of this timing arc.",
+      "to": "<int> Item identifier at the head of this timing arc.",
+      "lag": "<int> Minimum number of time periods by which the head item's assigned period must exceed the tail item's assigned period."
+    }
+  ]
+}

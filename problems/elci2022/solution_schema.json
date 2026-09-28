@@ -1,0 +1,13 @@
+{
+  "objective_value": "<float> Expected makespan across all scenarios, weighted by scenario probabilities.",
+  "assignment": "<dict, key: '{job}'> Facility to which each job is assigned before uncertainty is revealed.",
+  "schedule": {
+    "{scenario}": {
+      "{job}": {
+        "facility": "<int> Facility on which this job is processed in this scenario.",
+        "start": "<int> Time at which this job begins processing in this scenario.",
+        "finish": "<int> Time at which this job completes processing in this scenario."
+      }
+    }
+  }
+}

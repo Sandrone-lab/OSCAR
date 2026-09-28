@@ -1,0 +1,5 @@
+{
+  "objective_value": "<int> Minimum number of colors used to color all vertices.",
+  "vertex_colors": "<dict, key: '{node}'> Color assigned to each vertex, represented as an integer label starting from 0.",
+  "color_classes": "<list[list[int]], length objective_value> Groups of vertices sharing the same color, where each group forms an independent set with no two vertices connected by an edge."
+}

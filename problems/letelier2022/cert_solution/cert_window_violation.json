@@ -1,0 +1,881 @@
+{
+ "status": 9,
+ "status_name": "TIME_LIMIT",
+ "objective_value": 28.0,
+ "assignments": [
+  {
+   "item_id": 0,
+   "bin": 0,
+   "period": 2,
+   "weight": 9
+  },
+  {
+   "item_id": 1,
+   "bin": 0,
+   "period": 11,
+   "weight": 17
+  },
+  {
+   "item_id": 2,
+   "bin": 0,
+   "period": 21,
+   "weight": 16
+  },
+  {
+   "item_id": 3,
+   "bin": 0,
+   "period": 33,
+   "weight": 23
+  },
+  {
+   "item_id": 4,
+   "bin": 0,
+   "period": 43,
+   "weight": 12
+  },
+  {
+   "item_id": 5,
+   "bin": 0,
+   "period": 54,
+   "weight": 10
+  },
+  {
+   "item_id": 6,
+   "bin": 0,
+   "period": 64,
+   "weight": 16
+  },
+  {
+   "item_id": 7,
+   "bin": 0,
+   "period": 73,
+   "weight": 19
+  },
+  {
+   "item_id": 8,
+   "bin": 0,
+   "period": 83,
+   "weight": 18
+  },
+  {
+   "item_id": 9,
+   "bin": 0,
+   "period": 93,
+   "weight": 14
+  },
+  {
+   "item_id": 10,
+   "bin": 0,
+   "period": 102,
+   "weight": 19
+  },
+  {
+   "item_id": 11,
+   "bin": 0,
+   "period": 113,
+   "weight": 14
+  },
+  {
+   "item_id": 12,
+   "bin": 0,
+   "period": 123,
+   "weight": 14
+  },
+  {
+   "item_id": 13,
+   "bin": 0,
+   "period": 131,
+   "weight": 11
+  },
+  {
+   "item_id": 14,
+   "bin": 0,
+   "period": 11,
+   "weight": 11
+  },
+  {
+   "item_id": 15,
+   "bin": 0,
+   "period": 21,
+   "weight": 18
+  },
+  {
+   "item_id": 16,
+   "bin": 0,
+   "period": 33,
+   "weight": 7
+  },
+  {
+   "item_id": 17,
+   "bin": 0,
+   "period": 46,
+   "weight": 22
+  },
+  {
+   "item_id": 18,
+   "bin": 0,
+   "period": 60,
+   "weight": 18
+  },
+  {
+   "item_id": 19,
+   "bin": 0,
+   "period": 71,
+   "weight": 13
+  },
+  {
+   "item_id": 20,
+   "bin": 0,
+   "period": 83,
+   "weight": 24
+  },
+  {
+   "item_id": 21,
+   "bin": 0,
+   "period": 95,
+   "weight": 9
+  },
+  {
+   "item_id": 22,
+   "bin": 0,
+   "period": 110,
+   "weight": 7
+  },
+  {
+   "item_id": 23,
+   "bin": 0,
+   "period": 126,
+   "weight": 23
+  },
+  {
+   "item_id": 24,
+   "bin": 0,
+   "period": 9,
+   "weight": 23
+  },
+  {
+   "item_id": 25,
+   "bin": 0,
+   "period": 21,
+   "weight": 16
+  },
+  {
+   "item_id": 26,
+   "bin": 0,
+   "period": 33,
+   "weight": 16
+  },
+  {
+   "item_id": 27,
+   "bin": 0,
+   "period": 46,
+   "weight": 17
+  },
+  {
+   "item_id": 28,
+   "bin": 0,
+   "period": 64,
+   "weight": 22
+  },
+  {
+   "item_id": 29,
+   "bin": 0,
+   "period": 79,
+   "weight": 10
+  },
+  {
+   "item_id": 30,
+   "bin": 0,
+   "period": 93,
+   "weight": 24
+  },
+  {
+   "item_id": 31,
+   "bin": 0,
+   "period": 110,
+   "weight": 9
+  },
+  {
+   "item_id": 32,
+   "bin": 0,
+   "period": 126,
+   "weight": 21
+  },
+  {
+   "item_id": 33,
+   "bin": 0,
+   "period": 11,
+   "weight": 7
+  },
+  {
+   "item_id": 34,
+   "bin": 0,
+   "period": 24,
+   "weight": 23
+  },
+  {
+   "item_id": 35,
+   "bin": 0,
+   "period": 43,
+   "weight": 21
+  },
+  {
+   "item_id": 36,
+   "bin": 0,
+   "period": 60,
+   "weight": 11
+  },
+  {
+   "item_id": 37,
+   "bin": 0,
+   "period": 73,
+   "weight": 8
+  },
+  {
+   "item_id": 38,
+   "bin": 0,
+   "period": 86,
+   "weight": 18
+  },
+  {
+   "item_id": 39,
+   "bin": 0,
+   "period": 102,
+   "weight": 16
+  },
+  {
+   "item_id": 40,
+   "bin": 0,
+   "period": 123,
+   "weight": 9
+  },
+  {
+   "item_id": 41,
+   "bin": 0,
+   "period": 19,
+   "weight": 17
+  },
+  {
+   "item_id": 42,
+   "bin": 0,
+   "period": 33,
+   "weight": 14
+  },
+  {
+   "item_id": 43,
+   "bin": 0,
+   "period": 46,
+   "weight": 9
+  },
+  {
+   "item_id": 44,
+   "bin": 0,
+   "period": 60,
+   "weight": 19
+  },
+  {
+   "item_id": 45,
+   "bin": 0,
+   "period": 73,
+   "weight": 24
+  },
+  {
+   "item_id": 46,
+   "bin": 0,
+   "period": 93,
+   "weight": 9
+  },
+  {
+   "item_id": 47,
+   "bin": 0,
+   "period": 110,
+   "weight": 22
+  },
+  {
+   "item_id": 48,
+   "bin": 0,
+   "period": 131,
+   "weight": 11
+  },
+  {
+   "item_id": 49,
+   "bin": 0,
+   "period": 2,
+   "weight": 19
+  },
+  {
+   "item_id": 50,
+   "bin": 0,
+   "period": 11,
+   "weight": 16
+  },
+  {
+   "item_id": 51,
+   "bin": 0,
+   "period": 24,
+   "weight": 16
+  },
+  {
+   "item_id": 52,
+   "bin": 0,
+   "period": 36,
+   "weight": 12
+  },
+  {
+   "item_id": 53,
+   "bin": 0,
+   "period": 46,
+   "weight": 12
+  },
+  {
+   "item_id": 54,
+   "bin": 0,
+   "period": 60,
+   "weight": 8
+  },
+  {
+   "item_id": 55,
+   "bin": 0,
+   "period": 73,
+   "weight": 6
+  },
+  {
+   "item_id": 56,
+   "bin": 0,
+   "period": 86,
+   "weight": 21
+  },
+  {
+   "item_id": 57,
+   "bin": 0,
+   "period": 95,
+   "weight": 10
+  },
+  {
+   "item_id": 58,
+   "bin": 0,
+   "period": 110,
+   "weight": 7
+  },
+  {
+   "item_id": 59,
+   "bin": 0,
+   "period": 123,
+   "weight": 11
+  },
+  {
+   "item_id": 60,
+   "bin": 0,
+   "period": 134,
+   "weight": 20
+  },
+  {
+   "item_id": 61,
+   "bin": 0,
+   "period": 9,
+   "weight": 7
+  },
+  {
+   "item_id": 62,
+   "bin": 0,
+   "period": 24,
+   "weight": 19
+  },
+  {
+   "item_id": 63,
+   "bin": 0,
+   "period": 36,
+   "weight": 16
+  },
+  {
+   "item_id": 64,
+   "bin": 0,
+   "period": 54,
+   "weight": 13
+  },
+  {
+   "item_id": 65,
+   "bin": 0,
+   "period": 71,
+   "weight": 7
+  },
+  {
+   "item_id": 66,
+   "bin": 0,
+   "period": 83,
+   "weight": 18
+  },
+  {
+   "item_id": 67,
+   "bin": 0,
+   "period": 95,
+   "weight": 17
+  },
+  {
+   "item_id": 68,
+   "bin": 0,
+   "period": 113,
+   "weight": 7
+  },
+  {
+   "item_id": 69,
+   "bin": 0,
+   "period": 131,
+   "weight": 21
+  },
+  {
+   "item_id": 70,
+   "bin": 0,
+   "period": 2,
+   "weight": 11
+  },
+  {
+   "item_id": 71,
+   "bin": 0,
+   "period": 9,
+   "weight": 18
+  },
+  {
+   "item_id": 72,
+   "bin": 0,
+   "period": 19,
+   "weight": 11
+  },
+  {
+   "item_id": 73,
+   "bin": 0,
+   "period": 29,
+   "weight": 22
+  },
+  {
+   "item_id": 74,
+   "bin": 0,
+   "period": 36,
+   "weight": 15
+  },
+  {
+   "item_id": 75,
+   "bin": 0,
+   "period": 43,
+   "weight": 15
+  },
+  {
+   "item_id": 76,
+   "bin": 0,
+   "period": 54,
+   "weight": 9
+  },
+  {
+   "item_id": 77,
+   "bin": 0,
+   "period": 64,
+   "weight": 11
+  },
+  {
+   "item_id": 78,
+   "bin": 0,
+   "period": 71,
+   "weight": 16
+  },
+  {
+   "item_id": 79,
+   "bin": 0,
+   "period": 79,
+   "weight": 13
+  },
+  {
+   "item_id": 80,
+   "bin": 0,
+   "period": 86,
+   "weight": 20
+  },
+  {
+   "item_id": 81,
+   "bin": 0,
+   "period": 93,
+   "weight": 8
+  },
+  {
+   "item_id": 82,
+   "bin": 0,
+   "period": 102,
+   "weight": 17
+  },
+  {
+   "item_id": 83,
+   "bin": 0,
+   "period": 113,
+   "weight": 22
+  },
+  {
+   "item_id": 84,
+   "bin": 0,
+   "period": 123,
+   "weight": 18
+  },
+  {
+   "item_id": 85,
+   "bin": 0,
+   "period": 134,
+   "weight": 9
+  },
+  {
+   "item_id": 86,
+   "bin": 0,
+   "period": 9,
+   "weight": 12
+  },
+  {
+   "item_id": 87,
+   "bin": 0,
+   "period": 19,
+   "weight": 21
+  },
+  {
+   "item_id": 88,
+   "bin": 0,
+   "period": 29,
+   "weight": 20
+  },
+  {
+   "item_id": 89,
+   "bin": 0,
+   "period": 43,
+   "weight": 7
+  },
+  {
+   "item_id": 90,
+   "bin": 0,
+   "period": 54,
+   "weight": 10
+  },
+  {
+   "item_id": 91,
+   "bin": 0,
+   "period": 64,
+   "weight": 7
+  },
+  {
+   "item_id": 92,
+   "bin": 0,
+   "period": 79,
+   "weight": 7
+  },
+  {
+   "item_id": 93,
+   "bin": 0,
+   "period": 95,
+   "weight": 22
+  },
+  {
+   "item_id": 94,
+   "bin": 0,
+   "period": 110,
+   "weight": 15
+  },
+  {
+   "item_id": 95,
+   "bin": 0,
+   "period": 126,
+   "weight": 6
+  }
+ ],
+ "active_bin_periods": [
+  {
+   "bin": 0,
+   "period": 2,
+   "items": [
+    0,
+    49,
+    70
+   ],
+   "total_weight": 39
+  },
+  {
+   "bin": 0,
+   "period": 9,
+   "items": [
+    24,
+    61,
+    71,
+    86
+   ],
+   "total_weight": 60
+  },
+  {
+   "bin": 0,
+   "period": 11,
+   "items": [
+    1,
+    14,
+    33,
+    50
+   ],
+   "total_weight": 51
+  },
+  {
+   "bin": 0,
+   "period": 19,
+   "items": [
+    41,
+    72,
+    87
+   ],
+   "total_weight": 49
+  },
+  {
+   "bin": 0,
+   "period": 21,
+   "items": [
+    2,
+    15,
+    25
+   ],
+   "total_weight": 50
+  },
+  {
+   "bin": 0,
+   "period": 24,
+   "items": [
+    34,
+    51,
+    62
+   ],
+   "total_weight": 58
+  },
+  {
+   "bin": 0,
+   "period": 29,
+   "items": [
+    73,
+    88
+   ],
+   "total_weight": 42
+  },
+  {
+   "bin": 0,
+   "period": 33,
+   "items": [
+    3,
+    16,
+    26,
+    42
+   ],
+   "total_weight": 60
+  },
+  {
+   "bin": 0,
+   "period": 36,
+   "items": [
+    52,
+    63,
+    74
+   ],
+   "total_weight": 43
+  },
+  {
+   "bin": 0,
+   "period": 43,
+   "items": [
+    4,
+    35,
+    75,
+    89
+   ],
+   "total_weight": 55
+  },
+  {
+   "bin": 0,
+   "period": 46,
+   "items": [
+    17,
+    27,
+    43,
+    53
+   ],
+   "total_weight": 60
+  },
+  {
+   "bin": 0,
+   "period": 54,
+   "items": [
+    5,
+    64,
+    76,
+    90
+   ],
+   "total_weight": 42
+  },
+  {
+   "bin": 0,
+   "period": 60,
+   "items": [
+    18,
+    36,
+    44,
+    54
+   ],
+   "total_weight": 56
+  },
+  {
+   "bin": 0,
+   "period": 64,
+   "items": [
+    6,
+    28,
+    77,
+    91
+   ],
+   "total_weight": 56
+  },
+  {
+   "bin": 0,
+   "period": 71,
+   "items": [
+    19,
+    65,
+    78
+   ],
+   "total_weight": 36
+  },
+  {
+   "bin": 0,
+   "period": 73,
+   "items": [
+    7,
+    37,
+    45,
+    55
+   ],
+   "total_weight": 57
+  },
+  {
+   "bin": 0,
+   "period": 79,
+   "items": [
+    29,
+    79,
+    92
+   ],
+   "total_weight": 30
+  },
+  {
+   "bin": 0,
+   "period": 83,
+   "items": [
+    8,
+    20,
+    66
+   ],
+   "total_weight": 60
+  },
+  {
+   "bin": 0,
+   "period": 86,
+   "items": [
+    38,
+    56,
+    80
+   ],
+   "total_weight": 59
+  },
+  {
+   "bin": 0,
+   "period": 93,
+   "items": [
+    9,
+    30,
+    46,
+    81
+   ],
+   "total_weight": 55
+  },
+  {
+   "bin": 0,
+   "period": 95,
+   "items": [
+    21,
+    57,
+    67,
+    93
+   ],
+   "total_weight": 58
+  },
+  {
+   "bin": 0,
+   "period": 102,
+   "items": [
+    10,
+    39,
+    82
+   ],
+   "total_weight": 52
+  },
+  {
+   "bin": 0,
+   "period": 110,
+   "items": [
+    22,
+    31,
+    47,
+    58,
+    94
+   ],
+   "total_weight": 60
+  },
+  {
+   "bin": 0,
+   "period": 113,
+   "items": [
+    11,
+    68,
+    83
+   ],
+   "total_weight": 43
+  },
+  {
+   "bin": 0,
+   "period": 123,
+   "items": [
+    12,
+    40,
+    59,
+    84
+   ],
+   "total_weight": 52
+  },
+  {
+   "bin": 0,
+   "period": 126,
+   "items": [
+    23,
+    32,
+    95
+   ],
+   "total_weight": 50
+  },
+  {
+   "bin": 0,
+   "period": 131,
+   "items": [
+    48,
+    69
+   ],
+   "total_weight": 32
+  },
+  {
+   "bin": 0,
+   "period": 134,
+   "items": [
+    13,
+    60,
+    85
+   ],
+   "total_weight": 40
+  }
+ ],
+ "num_active_bin_periods": 28,
+ "optimal": false,
+ "gap": 0.14285714285714285,
+ "runtime_seconds": 3600.2239468097687
+}
