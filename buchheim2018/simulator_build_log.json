@@ -1,0 +1,137 @@
+{
+  "problem": "QWEN2",
+  "certified": true,
+  "model": "qwen3.6-flash",
+  "phases": [
+    {
+      "model": "qwen3.5-flash",
+      "trials_allowed": 5,
+      "certified": false,
+      "trials_used": 5,
+      "seconds": 668.5
+    },
+    {
+      "model": "qwen3.6-flash",
+      "trials_allowed": 20,
+      "certified": true,
+      "trials_used": 3,
+      "seconds": 138.9
+    }
+  ],
+  "verdict_log": {
+    "trials": 3,
+    "syntax_fixes": 0,
+    "revisions": 2,
+    "certified": true,
+    "failures": [
+      {
+        "solution": {
+          "solution_arcs": [
+            {
+              "id": 0,
+              "from_node": 0,
+              "to_node": 1
+            },
+            {
+              "id": 0,
+              "from_node": 0,
+              "to_node": 1
+            }
+          ]
+        },
+        "review": "This input is a FRAGMENT of a solution: it carries \"__partial__\": true and shows only what one rule does or does not allow. the same arc appears twice in the selection Judge only what the fragment con"
+      },
+      {
+        "solution": "robustness battery",
+        "review": "Your function was given inputs that are not valid solutions, and mishandled some of them. It must NEVER raise an exception, and it must reject any input that does not express a decision in the require"
+      }
+    ],
+    "seconds": 138.9
+  },
+  "audits": [
+    {
+      "round": 1,
+      "quality": {
+        "n": 5,
+        "actionable": 4.4,
+        "rule": 1.0,
+        "where": 0.8,
+        "computed": 0.6,
+        "required": 0.8,
+        "amount": 0.6
+      },
+      "rows": [
+        {
+          "message": "Constraint 0 (Source node 0 out-degree must be 1): computed LHS 0 against RHS 1, off by 1",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 4,
+            "ideal": "Constraint 0 violated: The calculated out-degree for Source node 0 (LHS 0) falls 1 unit short of the required value (RHS 1)."
+          }
+        },
+        {
+          "message": "Constraint 2 (Intermediate node 1 flow conservation (out=1 vs in=0)): computed LHS 1 against RHS 0, off by 1",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": true,
+            "required": true,
+            "amount": true,
+            "actionable": 4,
+            "ideal": "Constraint 2 (Intermediate node 1 flow conservation): Computed LHS 1.0 against required RHS 0.0, exceeded by 1.0."
+          }
+        },
+        {
+          "message": "Solution is structurally valid, but the reported objective_value 736.0 is inconsistent with the recomputed objective 1472.0 (difference 736.0).",
+          "verdict": {
+            "rule": "objective_value_consistency",
+            "where": "solution.objective_value",
+            "computed": 1472.0,
+            "required": 1472.0,
+            "amount": 736.0,
+            "actionable": 4,
+            "ideal": "The reported objective_value 736.0 must equal the recomputed objective 1472.0, indicating a calculation error in the sum of path costs."
+          }
+        },
+        {
+          "message": "Missing path representation: solution must contain either 'solution_arcs' or 'solution_x'.",
+          "verdict": {
+            "rule": true,
+            "where": false,
+            "computed": false,
+            "required": true,
+            "amount": false,
+            "actionable": 5,
+            "ideal": "The solution output is invalid because it is missing the required 'solution_arcs' or 'solution_x' path representation field."
+          }
+        },
+        {
+          "message": "Rule (binary arc usage): Arc 0 appears more than once in 'solution_arcs'.",
+          "verdict": {
+            "rule": true,
+            "where": true,
+            "computed": false,
+            "required": false,
+            "amount": false,
+            "actionable": 5,
+            "ideal": "Rule (binary arc usage): Arc 0 appears 2.0 times in 'solution_arcs', exceeding the limit of 1.0 by 1.0."
+          }
+        }
+      ]
+    }
+  ],
+  "bar": 4.0,
+  "judge": "qwen3.5-flash",
+  "metrics": {
+    "calls": 14,
+    "prompt_tokens": 53342,
+    "completion_tokens": 135220,
+    "total_tokens": 188562,
+    "llm_elapsed_sec": 1055.188
+  },
+  "seconds": 1056.4
+}

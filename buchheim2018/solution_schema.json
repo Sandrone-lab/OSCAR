@@ -1,0 +1,10 @@
+{
+  "objective_value": "<float> Total path cost, combining linear traversal costs and quadratic interaction costs of all selected arcs.",
+  "solution_arcs": [
+    {
+      "id": "<int> Unique identifier of this arc selected in the path.",
+      "from_node": "<int> Identifier of the node where this selected arc originates.",
+      "to_node": "<int> Identifier of the node where this selected arc terminates."
+    }
+  ]
+}

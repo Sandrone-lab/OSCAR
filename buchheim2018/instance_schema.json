@@ -1,0 +1,23 @@
+{
+  "grid_size_k": "<int> Side length of the square grid network.",
+  "num_nodes": "<int> Total number of nodes in the grid network.",
+  "num_arcs": "<int> Total number of directed arcs in the grid network.",
+  "source_node": "<int> Identifier of the origin node where the path must start.",
+  "target_node": "<int> Identifier of the destination node where the path must end.",
+  "nodes": [
+    {
+      "id": "<int> Unique identifier of this node in row-major order.",
+      "row": "<int> Row position of this node in the grid.",
+      "col": "<int> Column position of this node in the grid."
+    }
+  ],
+  "arcs": [
+    {
+      "id": "<int> Unique identifier of this arc.",
+      "from_node": "<int> Identifier of the node where this arc originates.",
+      "to_node": "<int> Identifier of the node where this arc terminates."
+    }
+  ],
+  "linear_costs": "<list[int], length num_arcs> Traversal cost incurred for using each arc in the path.",
+  "quadratic_costs": "<list[list[int]], shape [num_arcs][num_arcs]> Symmetric interaction cost incurred when each pair of arcs both appear in the chosen path, with zero diagonal entries."
+}

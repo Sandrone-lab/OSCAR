@@ -1,0 +1,80 @@
+# Problem Description
+
+A hauler operates on a strongly-connected directed road network consisting of a set of nodes and a set of directed arcs, where one distinguished node serves as the depot. Each arc has an associated traveling cost. A designated subset of arcs are profitable arcs, each yielding a positive profit that can be collected at most once, specifically the first time the arc is traversed in a tour. The hauler must plan a closed tour that starts and ends at the depot, selecting which profitable arcs to serve so as to maximize net profit.
+
+Certain nodes in the network are the starting nodes (tail nodes) of profitable arcs. Among pairs of these starting nodes, incompatibility relationships may exist, which come in two forms: strong and weak. These incompatibilities are described by an incompatibility graph whose nodes are a subset of the profitable-arc starting nodes and whose edges are partitioned into two sets representing strong and weak incompatibilities respectively. Starting nodes that do not appear in the incompatibility graph are compatible with every other node and their profitable arcs may be freely selected.
+
+The input data specifies the number of nodes and the depot node, the full set of directed arcs with their traveling costs, the set of profitable arcs with their profits, the set of starting nodes that appear in the incompatibility graph, and the two sets of incompatibility edges (strong and weak) among those starting nodes. Each weak incompatibility edge also carries a penalty cost that must be paid to override that incompatibility.
+
+The hauler must decide which profitable arcs to serve, how many times each arc in the network is traversed, and which weak incompatibilities to override by paying their penalties. A profitable arc can only be served if it is traversed at least once. The number of arcs entering any node must equal the number of arcs leaving that node. The tour must be connected: for any subset of nodes not containing the depot, if a profitable arc with both endpoints in that subset is served, then at least one arc must leave that subset. If any profitable arc leaving a given starting node in the incompatibility graph is served, that node is considered active. Two nodes connected by a strong incompatibility edge cannot both be active, meaning no profitable arc leaving one and no profitable arc leaving the other may both be served. Two nodes connected by a weak incompatibility edge may both be active only if the associated penalty is paid. The number of times any arc is traversed is a nonnegative integer.
+
+The goal is to maximize the net profit, defined as the total profit collected from all served profitable arcs, minus the total traveling cost summed over all arc traversals (counting each traversal separately), minus the total penalty cost paid to override weak incompatibilities.
+
+The input data file tiny_instance.json contains the following fields.
+
+tiny_instance.json (object) - DPRPP-IC instance data
+├── name (string) - Instance name
+├── problem_type (string) - Problem type identifier, fixed as "DPRPP-IC"
+├── description (string) - Brief description of the instance
+├── num_nodes (integer) - Total number of nodes in the network
+├── depot (integer) - Depot node index
+├── num_arcs (integer) - Total number of directed arcs
+├── num_profitable_arcs (integer) - Total number of profitable arcs
+├── num_VI_nodes (integer) - Number of starting nodes appearing in the incompatibility graph
+├── num_strong_incompatibilities (integer) - Number of strong incompatibility edges
+├── num_weak_incompatibilities (integer) - Number of weak incompatibility edges
+├── arcs (array) - Directed arcs; each element is an array
+│ ├── [0] (integer) - Tail node
+│ ├── [1] (integer) - Head node
+│ └── [2] (integer) - Traveling cost
+├── profitable_arcs (array) - Profitable arcs; each element is an array
+│ ├── [0] (integer) - Tail node
+│ ├── [1] (integer) - Head node
+│ └── [2] (integer) - Profit
+├── VI_nodes (array) - Starting nodes appearing in the incompatibility graph; each element is an integer
+│ └── (integer) - Node index
+├── strong_incompatibilities (array) - Strong incompatibility edges; each element is an array
+│ ├── [0] (integer) - Node
+│ └── [1] (integer) - Node
+├── weak_incompatibilities (array) - Weak incompatibility edges; each element is an array
+│ ├── [0] (integer) - Node
+│ ├── [1] (integer) - Node
+│ └── [2] (integer, optional) - Penalty cost
+└── generation_parameters (object) - Instance generation metadata
+├── alpha (number) - Generation parameter
+├── beta (number) - Generation parameter
+├── gamma (number) - Generation parameter
+├── profit_multiplier_low (number) - Generation parameter
+├── profit_multiplier_high (number) - Generation parameter
+├── arc_cost_range (array) - Generation parameter; each element is an integer
+├── arcs_per_node_target (number) - Generation parameter
+├── profitable_fraction_target (number) - Generation parameter
+├── seed (integer) - Generation parameter
+└── attempt (integer) - Generation parameter
+
+Your solution must be output as a JSON object with the following exact field names:
+
+tiny_solution.json (object) - DPRPP-IC solution file
+├── objective_value (number) - Net profit: total collected profit minus total traveling cost minus total weak incompatibility penalty
+├── served_arcs (array) - Served profitable arcs; each element is an object
+│ ├── from (integer) - Tail node of the profitable arc
+│ ├── to (integer) - Head node of the profitable arc
+│ ├── profit (number) - Profit of this profitable arc
+│ └── cost (number) - Traveling cost of this arc
+├── tour_arcs (array) - Traversed arcs; each element is an object
+│ ├── from (integer) - Tail node of the arc
+│ ├── to (integer) - Head node of the arc
+│ ├── count (integer) - Number of times this arc is traversed
+│ └── cost (number) - Traveling cost of this arc
+├── total_profit (number) - Sum of profits of all served profitable arcs
+├── total_travel_cost (number) - Sum over all traversed arcs of traversal count multiplied by arc traveling cost
+├── total_penalty (number) - Total penalty cost paid to override weak incompatibilities
+├── status (string) - Solver status
+├── mip_gap (number or null) - MIP gap
+└── runtime (number) - Running time in seconds
+
+Notes:
+
+You may define additional auxiliary variables as needed, but the field names of the three fields above must strictly match.
+
+objective_value is used by the feasibility checker to verify objective consistency (Eq 11). It is recommended to include it for complete validation.
