@@ -1,0 +1,38 @@
+{
+  "trials": 3,
+  "syntax_fixes": 0,
+  "revisions": 2,
+  "certified": true,
+  "failures": [
+    {
+      "solution": {
+        "solution_arcs": [
+          {
+            "id": 0,
+            "from_node": 0,
+            "to_node": 1
+          },
+          {
+            "id": 0,
+            "from_node": 0,
+            "to_node": 1
+          }
+        ]
+      },
+      "review": "This input is a FRAGMENT of a solution: it carries \"__partial__\": true and shows only what one rule does or does not allow. the same arc appears twice in the selection Judge only what the fragment con"
+    },
+    {
+      "solution": "robustness battery",
+      "review": "Your function was given inputs that are not valid solutions, and mishandled some of them. It must NEVER raise an exception, and it must reject any input that does not express a decision in the require"
+    }
+  ],
+  "seconds": 427.4,
+  "metrics": {
+    "calls": 3,
+    "prompt_tokens": 14610,
+    "completion_tokens": 44497,
+    "total_tokens": 59107,
+    "llm_elapsed_sec": 426.987
+  },
+  "model": "qwen3.5-flash"
+}

@@ -1,0 +1,115 @@
+[
+  {
+    "instance": "instance\\large_instance_1.json",
+    "solution": "gurobi_solution\\large_solution_1.json",
+    "feasible": true,
+    "objective_value": 55248.0,
+    "reason": null
+  },
+  {
+    "instance": "instance\\large_instance_2.json",
+    "solution": "gurobi_solution\\large_solution_2.json",
+    "feasible": true,
+    "objective_value": 28319.0,
+    "reason": null
+  },
+  {
+    "instance": "instance\\large_instance_3.json",
+    "solution": "gurobi_solution\\large_solution_3.json",
+    "feasible": true,
+    "objective_value": 38917.0,
+    "reason": null
+  },
+  {
+    "instance": "instance\\large_instance_4.json",
+    "solution": "gurobi_solution\\large_solution_4.json",
+    "feasible": true,
+    "objective_value": 73104.0,
+    "reason": null
+  },
+  {
+    "instance": "instance\\large_instance_5.json",
+    "solution": "gurobi_solution\\large_solution_5.json",
+    "feasible": true,
+    "objective_value": 136909.0,
+    "reason": null
+  },
+  {
+    "instance": "instance\\large_instance_1.json",
+    "solution": "cert_wrong_objective.json",
+    "feasible": false,
+    "objective_value": null,
+    "expect_status": "INCONSISTENT_OBJECTIVE",
+    "reason": "The decisions themselves satisfy every rule of the problem, but the reported objective_value (220992.0) is inconsistent with the objective those decisions actually achieve (55248.0). Reject with status INCONSISTENT_OBJECTIVE; do not report any rule as violated."
+  },
+  {
+    "instance": "instance\\large_instance_1.json",
+    "solution": "cert_malformed.json",
+    "feasible": false,
+    "objective_value": null,
+    "expect_status": "MALFORMED_SOLUTION",
+    "reason": "The field \"served_arcs\" is a string, so the input does not express a solution at all and nothing about it can be checked. Reject it with status MALFORMED_SOLUTION and do NOT report any rule of the problem as violated. This is different from a solution that is readable but breaks a rule, which is INFEASIBLE."
+  },
+  {
+    "instance": "instance\\large_instance_2.json",
+    "solution": "cert_rule_2.json",
+    "feasible": false,
+    "objective_value": null,
+    "expect_status": "INFEASIBLE",
+    "rule": 2,
+    "reason": "This solution is well formed, but it breaks a rule of the problem and so could not be carried out. The trusted checker rejects it with: Constraint (2): Flow imbalance at node 169: outflow=0, inflow=1; Constraint (2): Flow imbalance at node 292: outflow=2, inflow=1 Reject it with status INFEASIBLE and name the rule that is broken."
+  },
+  {
+    "instance": "instance\\large_instance_2.json",
+    "solution": "cert_rule_5.json",
+    "feasible": false,
+    "objective_value": null,
+    "expect_status": "INFEASIBLE",
+    "rule": 5,
+    "reason": "This solution is well formed, but it breaks a rule of the problem and so could not be carried out. The trusted checker rejects it with: Constraint (5): Strong incompatibility violated: z_4=1 + z_317=1 = 2 > 1; Constraint (5): Strong incompatibility violated: z_136=1 + z_317=1 = 2 > 1; Constraint (5): Strong incompatibility violated: z_317=1 + z_384=1 = 2 > 1 Reject it with status INFEASIBLE and name the rule that is broken."
+  },
+  {
+    "instance": "instance\\large_instance_2.json",
+    "solution": "cert_rule_7.json",
+    "feasible": false,
+    "objective_value": null,
+    "expect_status": "INFEASIBLE",
+    "rule": 7,
+    "reason": "This solution is well formed, but it breaks a rule of the problem and so could not be carried out. The trusted checker rejects it with: Constraint (7): Tour arc (137,415) does not exist in the instance arc set Reject it with status INFEASIBLE and name the rule that is broken."
+  },
+  {
+    "instance": "instance\\large_instance_2.json",
+    "solution": "cert_rule_8.json",
+    "feasible": false,
+    "objective_value": null,
+    "expect_status": "INFEASIBLE",
+    "rule": 8,
+    "reason": "This solution is well formed, but it breaks a rule of the problem and so could not be carried out. The trusted checker rejects it with: Constraint (8): Served arc (165,337) is not a profitable arc in the instance Reject it with status INFEASIBLE and name the rule that is broken."
+  },
+  {
+    "instance": "instance\\large_instance_1.json",
+    "solution": "cert_rule_3.json",
+    "feasible": false,
+    "objective_value": null,
+    "expect_status": "INFEASIBLE",
+    "rule": 3,
+    "reason": "This solution is well formed and every other rule holds -- the flow balances, each served arc is traversed, the objective is consistent -- but the tour is not connected: a profitable arc is served in a component the depot's tour never reaches. The trusted checker rejects it with: Constraint (3): Served arc (390,63) is disconnected from depot (not in depot's connected component) Reject it with status INFEASIBLE and name connectivity as the rule that is broken."
+  },
+  {
+    "instance": "instance\\large_instance_2.json",
+    "solution": "cert_rule_1.json",
+    "feasible": false,
+    "objective_value": null,
+    "expect_status": "INFEASIBLE",
+    "rule": 1,
+    "reason": "This solution is well formed, but it breaks a rule of the problem and so could not be carried out. The trusted checker rejects it with: Constraint (1): Served arc (377,288) has y=1 but x=0 (arc not traversed) Reject it with status INFEASIBLE and name the rule that is broken."
+  },
+  {
+    "instance": "instance\\large_instance_2.json",
+    "solution": "cert_degenerate.json",
+    "feasible": true,
+    "objective_value": 0.0,
+    "degenerate": true,
+    "reason": "This solution makes no decisions at all -- every decision collection is empty -- and that is LEGAL here: the trusted checker accepts it, with objective 0.0. It is not malformed and it does not break any rule; it is simply the worst legal answer. Accept it, with status OK. Do not confuse it with a solution that empties one collection while keeping another, which is a different input and genuinely infeasible."
+  }
+]

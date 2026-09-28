@@ -1,0 +1,66 @@
+[
+  {
+    "instance": "instance\\large_instance_1.json",
+    "solution": "gurobi_solution\\large_solution_1.json",
+    "feasible": true,
+    "objective_value": 3731.0,
+    "reason": null
+  },
+  {
+    "instance": "instance\\large_instance_2.json",
+    "solution": "gurobi_solution\\large_solution_2.json",
+    "feasible": true,
+    "objective_value": 670.0,
+    "reason": null
+  },
+  {
+    "instance": "instance\\large_instance_3.json",
+    "solution": "gurobi_solution\\large_solution_3.json",
+    "feasible": true,
+    "objective_value": 1603.0,
+    "reason": null
+  },
+  {
+    "instance": "instance\\large_instance_4.json",
+    "solution": "gurobi_solution\\large_solution_4.json",
+    "feasible": true,
+    "objective_value": 2662.0,
+    "reason": null
+  },
+  {
+    "instance": "instance\\tiny_instance.json",
+    "solution": "cert_solution\\cert_feasible_suboptimal_tiny.json",
+    "feasible": true,
+    "objective_value": 1807.0,
+    "reason": "A valid plan that breaks no rule. It is far from optimal (1807.0 against the best known 1472.0), and it is still feasible: feasibility and optimality are different questions."
+  },
+  {
+    "instance": "instance\\tiny_instance.json",
+    "solution": "cert_solution\\cert_broken_path.json",
+    "feasible": false,
+    "objective_value": null,
+    "reason": "an arc has been removed from the middle of the path, so flow is no longer conserved and the arcs no longer form a route from the origin to the destination"
+  },
+  {
+    "instance": "instance\\tiny_instance.json",
+    "solution": "cert_solution\\cert_wrong_objective.json",
+    "feasible": false,
+    "objective_value": null,
+    "reason": "the reported objective does not equal the linear plus quadratic cost of the arcs actually selected"
+  },
+  {
+    "instance": "instance\\tiny_instance.json",
+    "solution": "cert_solution\\cert_extra_arc.json",
+    "feasible": false,
+    "objective_value": null,
+    "reason": "an arc unconnected to the route has been added, so some node now has more arcs entering or leaving it than the path structure allows"
+  },
+  {
+    "instance": "instance\\large_instance_1.json",
+    "solution": "cert_malformed.json",
+    "feasible": false,
+    "objective_value": null,
+    "reason": "The field \"solution_arcs\" is a string, so the input does not express a solution at all and nothing about it can be checked. Reject it with status MALFORMED_SOLUTION and do NOT report any rule of the problem as violated. This is different from a solution that is readable but breaks a rule, which is INFEASIBLE.",
+    "expect_status": "MALFORMED_SOLUTION"
+  }
+]
