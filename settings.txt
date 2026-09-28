@@ -1,0 +1,92 @@
+# OSCAR experiment settings
+#
+# This is the one place to set up a run. Edit it in any text editor and save;
+# start.py reads it each time it starts, and option 2 reloads it without
+# restarting. run_experiment.py reads it too, so both entry points agree.
+#
+# Lines beginning with # are comments. Everything else is  key = value.
+#
+# Precedence, weakest first:  this file  <  an environment variable  <  a
+# command-line flag. So exporting OSCAR_SMALL_MODEL overrides small_model here,
+# and --model overrides both.
+#
+# YOUR API KEY DOES NOT BELONG IN THIS FILE. start.py asks for it at the prompt
+# and holds it in memory only, or set OSCAR_API_KEY in your shell beforehand.
+# Nothing here is secret, so this file is safe to keep in version control.
+
+
+# ------------------------------------------------------------------ the models
+#
+# OSCAR uses exactly two models, and only two: a cheap one it tries first and a
+# stronger one it escalates to. Name them as your endpoint names them. The
+# defaults are the pair the paper used.
+#
+#   small   the cheap Coder, the structure constructor, and syntax repair
+#   large   the Reviewer, the expensive Coder, and Simulator construction
+#
+# They must differ. With one model named twice the Escalator has nothing to
+# escalate to, and the comparison the paper makes disappears.
+
+small_model = qwen3.5-flash
+large_model = qwen3.6-flash
+
+# The OpenAI-compatible endpoint your key belongs to, for example
+#   https://api.openai.com/v1
+# Leave blank to use whatever the openai client defaults to.
+# Write it plainly, with no quotation marks. Wrong:
+# api_base = "https://api.openai.com/v1"
+# Right:
+# api_base = https://api.openai.com/v1
+
+api_base = 
+
+
+# --------------------------------------------------------------- what to run
+#
+# Which problem. One of the directories under problems/ :
+#
+#   name            class        OSCAR reached the optimum    median OSCAR run
+#   mehrotra1996    graph            100 of 100 runs               9 min
+#   buchheim2018    quadratic        100 of 100                   95 min
+#   letelier2022    packing           97 of 100                   30 min
+#   elci2022        scheduling        95 of 100                   30 min
+#   colombi2017     routing           72 of 100                   41 min
+#
+# mehrotra1996 is the default because it is the one that shows the method working
+# soonest: every run reached the optimum, the median run took nine minutes, and it
+# spends about a quarter of the tokens of any other problem here.
+#
+# For the widest gap against the baseline, use elci2022: one-shot reaches the optimum
+# on 4% of repetitions with the cheap model and 35% with the strong one, against 95%
+# for OSCAR. buchheim2018 is the quadratic one and by far the slowest -- most of a run
+# there is COPT solving, not the models answering.
+
+problem = mehrotra1996
+
+# The one-shot baseline: one Coder call plus syntax repair, no Simulator and no
+# second attempt. How many independent repetitions, and which of the two models
+# above writes the formulation (small or large).
+
+oneshot_reps = 5
+oneshot_model = small
+
+# OSCAR: how many independent runs, and Algorithm 1's n_j -- how many attempts
+# are allowed at each configuration of the Escalator's menu before it escalates.
+# One number applies to every level; four comma-separated numbers, in cost
+# order, set them individually.
+#
+#   1          one attempt at each             -- the paper's n = 1
+#   1,1,3,3    three at the two dearer ones    -- the paper's n = (1,1,3,3)
+#
+# Runs are independent repetitions of the same experiment, so this is the "n"
+# to raise when you want a success rate rather than a single outcome. Ten OSCAR
+# runs is a reasonable first measurement; the paper reports 100. On mehrotra1996
+# ten runs is about an hour and a half; on buchheim2018 it is a day.
+#
+# Expect to wait either way. Almost none of that time is this code: a run waits
+# for the endpoint to answer each model call, and then for COPT to solve each
+# program the Coder writes. Stopping with Ctrl-C loses nothing -- every run is
+# written out as it finishes, and starting again continues from there.
+
+oscar_runs = 1
+oscar_n_per_level = 1
